@@ -1,0 +1,31 @@
+// _client_info.scss
+
+$background-color: #FBF8EF;
+$border-color: #999;
+$radius: 4px;
+$padding: 10px 20px;
+
+.clientInfo {
+    background-color: $background-color;
+    padding: $padding;
+    h1 {
+        text-align: center;
+    }
+    label {
+        margin: 10px 0px;
+    }
+    input, select {
+        margin: 0px 0px 10px 10px;
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+        border-radius: $radius;
+    }
+    option, input {
+        padding: 4px;
+        border: 1px solid $border-color;
+    }
+    .question {
+        clear: both;
+    }
+}
