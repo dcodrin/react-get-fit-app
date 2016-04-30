@@ -4,32 +4,32 @@ class Neurological extends React.Component {
     constructor(props) {
         super(props);
         this.showText = this.showText.bind(this);
+        this.handleMotorDeficit = this.handleMotorDeficit;
+        this.postResults = this.postResults.bind(this)
     }
 
     showText() {
         alert("wassup")
     }
 
-    handleEmailChange (e) {
+    handleMotorDeficit (e) {
         this.setState({
-            MotorDeficit: e.target.value
+            motorDeficit: e.target.value
         });
     }
     
-    handlePasswordChange (e) {
-            this.setState({
-                Reflexes: e.target.value
-            });
-        }
+    postResults (){
+        console.log("Motor deficit: " + this.state.motorDeficit);
+    }
 
         render() {
             return (
                 <div>
-            <div className="headline">Motor deficit:</div> <input type="text" name="MotorDeficit" onChange={this.handleEmailChange} />
+            <div className="headline">Motor deficit:</div> <input type="text" name="MotorDeficit" onChange={this.handleMotorDeficit} />
             <div className="headline">Reflexes:</div>  <input type="text" name="Reflexes" /><br/>
             <div className="headline">Sensory Deficit: </div>  <input type="text" name="SensoryDeficit" />
             <div className="headline">Dural Signs: </div><input type="text" name="DuralSigns" /><br/>
-            <button onClick={this.handleEmailChange()}>Click me!</button>
+            <button onClick={this.postResults()}>Click me!</button>
         </div>
             )
         }
