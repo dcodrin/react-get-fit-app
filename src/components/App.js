@@ -1,29 +1,31 @@
 import React from 'react';
-import {bindActionCreators} from 'redux';
+import PrincipleOfManagement from './principle_of_management.js';
+import {bindActionCreators} from 'redux';  // object
 import {connect} from 'react-redux';
 
 import {updateCount} from '../actions/index';
 import SpecificQuestions from './specific_questions.js';
 
-class App extends React.Component {
+class App extends React.Component {  // var App based on constructor react.component
   //React.Component passes down props to the constructor
   constructor(props){
     //We access function on the object's parent using the super;
     super(props);
 
-    this.onButtonClick = this.onButtonClick.bind(this);
+    this.onButtonClick = this.onButtonClick.bind(this);   // binding to App
   }
 
   onButtonClick(){
     this.props.updateCount();
   }
 
-  render() {
+  render() {   // react always has to have a render method and it has to return JSX (looks likes html)
     console.log(this.props);
     return (
       <div>
           HELLO MARS! WE ARE LIVE!
           <SpecificQuestions/>
+          <PrincipleOfManagement/>
           <div>
             <button onClick={this.onButtonClick}>Click me!</button>
           </div>
