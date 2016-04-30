@@ -7,13 +7,13 @@ import MouvementLoss from './mouvement_loss.js';
 import {updateCount} from '../actions/index';
 import SpecificQuestions from './specific_questions.js';
 
-<<<<<<< HEAD
+
+
 import TestMovements from './test_movements.js'
 
-class App extends React.Component {
-=======
+
 class App extends React.Component {  // var App based on constructor react.component
->>>>>>> master
+
   //React.Component passes down props to the constructor
   constructor(props){
     //We access function on the object's parent using the super;
