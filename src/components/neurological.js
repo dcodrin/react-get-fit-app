@@ -1,18 +1,38 @@
 import React from 'react';
 class Neurological extends React.Component {
-    
-    render() {
-        return (
-        <div>
-            Motor deficit: <input type="text" name="MotorDeficit"  />
-            Reflexes <input type="text" name="Reflexes" /><br/>
-            Sensory Deficit: <input type="text" name="SensoryDeficit" />
-            Dural Signs: <input type="text" name="DuralSigns" /><br/>
-            <input type="submit" value="Submit" />
 
-        </div>
-        )
+    constructor(props) {
+        super(props);
+        this.showText = this.showText.bind(this);
     }
+
+    showText() {
+        alert("wassup")
+    }
+
+    handleEmailChange (e) {
+        this.setState({
+            MotorDeficit: e.target.value
+        });
+    }
+    
+    handlePasswordChange (e) {
+            this.setState({
+                Reflexes: e.target.value
+            });
+        }
+
+        render() {
+            return (
+                <div>
+            <div className="headline">Motor deficit:</div> <input type="text" name="MotorDeficit" onChange={this.handleEmailChange} />
+            <div className="headline">Reflexes:</div>  <input type="text" name="Reflexes" /><br/>
+            <div className="headline">Sensory Deficit: </div>  <input type="text" name="SensoryDeficit" />
+            <div className="headline">Dural Signs: </div><input type="text" name="DuralSigns" /><br/>
+            <button onClick={this.handleEmailChange()}>Click me!</button>
+        </div>
+            )
+        }
 }
 
 export default Neurological;
