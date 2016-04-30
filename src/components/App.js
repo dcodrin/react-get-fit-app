@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import MouvementLoss from './mouvement_loss.js';
 
 import {updateCount} from '../actions/index';
+import SpecificQuestions from './specific_questions.js';
 
 class App extends React.Component {  // var App based on constructor react.component
   //React.Component passes down props to the constructor
@@ -24,6 +25,7 @@ class App extends React.Component {  // var App based on constructor react.compo
     return (
       <div>
           HELLO MARS! WE ARE LIVE!
+          <SpecificQuestions/>
           <PrincipleOfManagement/>
           <MouvementLoss/>
           <div>
