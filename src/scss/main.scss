@@ -1,0 +1,9 @@
+$primary-color: #900;
+$primary-font-color: #812;
+
+$font-stack: "Helvetica Neue", sans-serif;
+
+body {
+  font: $font-stack;
+  color: $primary-font-color;
+}
