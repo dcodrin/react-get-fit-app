@@ -1,15 +1,30 @@
 // _client_info.scss
 
 $background-color: #FBF8EF;
-$border-color: #999;
+$border: 1px solid #999;
 $radius: 4px;
 $padding: 10px 20px;
+$center: 0 auto;
 
 .clientInfo {
     background-color: $background-color;
     padding: $padding;
     h1 {
         text-align: center;
+    }
+    img {
+        margin: $center;
+        display: block;
+        border-radius: 50%;
+        border: $border;
+        padding: 30px;
+        background-color: #2E9AFE;
+        overflow:visible;
+        margin-bottom: 30px;
+    }
+    img:hover {
+        cursor:pointer;
+        background-color: #ff0000;
     }
     label {
         margin: 10px 0px;
@@ -23,7 +38,7 @@ $padding: 10px 20px;
     }
     option, input {
         padding: 4px;
-        border: 1px solid $border-color;
+        border: $border;
     }
     .question {
         clear: both;

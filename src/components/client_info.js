@@ -14,11 +14,13 @@ class ClientInfo extends React.Component {
   render() {
     return (
       <div className="clientInfo">
+        <div className="central">
           <h1>Client Information</h1>
-          
+          <img src="http://i236.photobucket.com/albums/ff256/Duda_Martins/Gifs%20Duda/kao08022.gif" border="0" alt="Click me! Gif photo: Click kao08022.gif" onClick={this.alertText}/>
+
           <div className="question">
             <label for="date">Date: </label>
-            <input id="date" type="date" placeholder="today's date"/>
+            <span><input id="date" type="date" placeholder="today's date"/></span>
           </div>
           
           <div className="question">
@@ -107,10 +109,7 @@ class ClientInfo extends React.Component {
             <label for="vas">VAS Score (0-10): </label>
             <input id="vas" type="number" min="1" max="10" />
           </div>
-          
-          <button onClick={this.alertText}>
-            click me!
-          </button>
+        </div>
       </div>
     );
   }
