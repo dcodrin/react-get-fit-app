@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
 import {updateCount} from '../actions/index';
+import SpecificQuestions from './specific_questions.js';
 
 class App extends React.Component {
   //React.Component passes down props to the constructor
@@ -22,6 +23,7 @@ class App extends React.Component {
     return (
       <div>
           HELLO MARS! WE ARE LIVE!
+          <SpecificQuestions/>
           <div>
             <button onClick={this.onButtonClick}>Click me!</button>
           </div>
