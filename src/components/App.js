@@ -2,6 +2,7 @@ import React from 'react';
 import PrincipleOfManagement from './principle_of_management.js';
 import {bindActionCreators} from 'redux';  // object
 import {connect} from 'react-redux';
+import MouvementLoss from './mouvement_loss.js';
 
 import {updateCount} from '../actions/index';
 
@@ -18,12 +19,13 @@ class App extends React.Component {  // var App based on constructor react.compo
     this.props.updateCount();
   }
 
-  render() {   // react always has to have a render method and it has to return JSX (looks likes html)
+  render() {
     console.log(this.props);
     return (
       <div>
           HELLO MARS! WE ARE LIVE!
           <PrincipleOfManagement/>
+          <MouvementLoss/>
           <div>
             <button onClick={this.onButtonClick}>Click me!</button>
           </div>
