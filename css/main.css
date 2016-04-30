@@ -1,0 +1,103 @@
+.symptomsTable {
+  border: 5px solid #a78798;
+  text-align: center;
+  background-color: #a78798;
+  color: black;
+  padding-top: 5px; }
+  .symptomsTable caption {
+    background-color: #a78798;
+    border: 10px solid #a78798; }
+  .symptomsTable .title {
+    font-size: 1.3em; }
+  .symptomsTable .symptom {
+    text-align: right; }
+  .symptomsTable .sectionTitle {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-style: italic; }
+
+.specific_questions {
+  font-style: italic;
+  border: 1px solid #ccc;
+  background-color: black;
+  color: white; }
+
+.input-fields {
+  width: 350px;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 25px; }
+
+.bg {
+  background-color: #ffaae7; }
+
+.fields {
+  color: #f21584;
+  font-family: sans-serif;
+  font-size: 18px;
+  width: 350px;
+  margin: 10px 0 3px 50px; }
+
+.image {
+  text-align: center; }
+
+.mainForm {
+  width: 350px;
+  margin: 0 auto 0 auto; }
+
+.buttonStyle {
+  margin: 10px auto 15px auto;
+  width: 350px;
+  height: 50px;
+  background-color: #f46eb1;
+  border: 3px solid #ffdbea;
+  border-radius: 10px;
+  font-size: 22px;
+  color: #fff; }
+
+table {
+  border-collapse: collapse; }
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 10px; }
+
+th:empty {
+  border: 0; }
+
+.clientInfo {
+  background-color: #FBF8EF;
+  padding: 10px 20px; }
+  .clientInfo h1 {
+    text-align: center; }
+  .clientInfo img {
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #999;
+    padding: 30px;
+    background-color: #2E9AFE;
+    overflow: visible;
+    margin-bottom: 30px; }
+  .clientInfo img:hover {
+    cursor: pointer;
+    background-color: #ff0000; }
+  .clientInfo label {
+    margin: 10px 0px; }
+  .clientInfo input, .clientInfo select {
+    margin: 0px 0px 10px 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+  .clientInfo option, .clientInfo input {
+    padding: 4px;
+    border: 1px solid #999; }
+  .clientInfo .question {
+    clear: both; }
+
+body {
+  font: "Helvetica Neue", sans-serif;
+  color: #812; }
+
+/*# sourceMappingURL=main.css.map */
