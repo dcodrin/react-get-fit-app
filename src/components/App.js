@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 
 import {updateCount} from '../actions/index';
 
+import TestMovements from './test_movements.js'
+
 class App extends React.Component {
   //React.Component passes down props to the constructor
   constructor(props){
@@ -18,9 +20,9 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
+          <TestMovements />
           HELLO MARS! WE ARE LIVE!
           <div>
             <button onClick={this.onButtonClick}>Click me!</button>

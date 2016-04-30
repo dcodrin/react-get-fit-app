@@ -1,0 +1,28 @@
+.symptomsTable {
+    
+    border: 5px solid #a78798;
+    text-align: center;
+    background-color: #a78798;
+    color: black;
+    padding-top: 5px;
+    
+    caption {
+    background-color: #a78798; 
+    border: 10px solid #a78798;
+    }
+    
+    .title {
+        font-size: 1.3em;
+    }
+    
+    .symptom {
+        text-align: right;
+    }
+    
+    .sectionTitle {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        font-style: italic;
+    }
+  
+}
