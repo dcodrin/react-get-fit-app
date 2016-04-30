@@ -1,6 +1,7 @@
 import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import MouvementLoss from './mouvement_loss.js';
 
 import {updateCount} from '../actions/index';
 
@@ -16,12 +17,15 @@ class App extends React.Component {
   onButtonClick(){
     this.props.updateCount();
   }
-
+  
+//React component always HAS to have a render method
   render() {
     console.log(this.props);
     return (
       <div>
           HELLO MARS! WE ARE LIVE!
+          <MouvementLoss/>
+          
           <div>
             <button onClick={this.onButtonClick}>Click me!</button>
           </div>
