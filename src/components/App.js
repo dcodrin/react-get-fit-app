@@ -10,7 +10,11 @@ class App extends React.Component {
   constructor(props){
     //We access functions/methods on the object's parent using the super;
     super(props);
+<<<<<<< HEAD
     // bind 'this' to my App
+=======
+
+>>>>>>> parent of 43302dc... Merge pull request #2 from poe21/master
     this.onButtonClick = this.onButtonClick.bind(this);
   }
 
@@ -18,7 +22,10 @@ class App extends React.Component {
     this.props.updateCount();
   }
 
+<<<<<<< HEAD
   // React components MUST have a render methods and this MUST always return HTML. The 'html' below is actually jsx
+=======
+>>>>>>> parent of 43302dc... Merge pull request #2 from poe21/master
   render() {
     console.log(this.props);
     return (
