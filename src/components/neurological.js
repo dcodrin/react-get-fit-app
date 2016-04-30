@@ -29,10 +29,15 @@ class Neurological extends React.Component {
             <div className="headline">Reflexes:</div>  <input type="text" name="Reflexes" /><br/>
             <div className="headline">Sensory Deficit: </div>  <input type="text" name="SensoryDeficit" />
             <div className="headline">Dural Signs: </div><input type="text" name="DuralSigns" /><br/>
-            <button onClick={this.postResults()}>Click me!</button>
+            <button onClick={this.postResults}>Click me!</button>
         </div>
             )
         }
 }
 
 export default Neurological;
+
+/*
+1bundle.js:28337 Uncaught TypeError: Cannot read property 'setState' of undefinedReactErrorUtils.invokeGuardedCallback @ bundle.js:5775
+bundle.js:28344 Uncaught TypeError: Cannot read property 'motorDeficit' of nullReactErrorUtils.invokeGuardedCallback @ bundle.js:5775
+*/
