@@ -30,9 +30,9 @@ class ClientInfo extends React.Component {
           
           <div className="question">
             <label for="gender">Gender: </label>
-            <input type="checkbox" name="gender" value="Male" /> Male
-            <input type="checkbox" name="gender" value="Female" /> Female
-            <input type="checkbox" name="gender" value="Other" /> Other
+            <input type="radio" name="gender" value="Male" /> Male
+            <input type="radio" name="gender" value="Female" /> Female
+            <input type="radio" name="gender" value="Other" /> Other
           </div>
           
           <div className="question">
