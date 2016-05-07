@@ -2,7 +2,11 @@ import React from 'react';
 import PrincipleOfManagement from './principle_of_management.js';
 import {bindActionCreators} from 'redux';  // object
 import {connect} from 'react-redux';
+
 import MouvementLoss from './mouvement_loss.js';
+
+import ClientInfo from "./client_info.js";
+
 
 import {updateCount} from '../actions/index';
 import SpecificQuestions from './specific_questions.js';
@@ -12,23 +16,28 @@ import SpecificQuestions from './specific_questions.js';
 import TestMovements from './test_movements.js'
 
 
-class App extends React.Component {  // var App based on constructor react.component
+class App extends React.Component {
 
-  //React.Component passes down props to the constructor
+
   constructor(props){
-    //We access function on the object's parent using the super;
+
     super(props);
 
-    this.onButtonClick = this.onButtonClick.bind(this);   // binding to App
+
+    this.onButtonClick = this.onButtonClick.bind(this);
+
+
   }
 
   onButtonClick(){
     this.props.updateCount();
   }
 
+
   render() {
     return (
       <div>
+          <ClientInfo prop="value" />
           <TestMovements />
           HELLO MARS! WE ARE LIVE!
           <SpecificQuestions/>
@@ -40,6 +49,7 @@ class App extends React.Component {  // var App based on constructor react.compo
           <div>
             {this.props.count}
           </div>
+
       </div>
     );
   }
@@ -53,7 +63,7 @@ function mapDispatchToProps(dispatch){
 
 //The current instance of App will have as one of it's props 'count'
 function mapStateToProps(state){
-  return {count: state.count}
+  return {count: state.count};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
