@@ -1,38 +1,68 @@
 import React from 'react';
 class Neurological extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.showText = this.showText.bind(this);
-        this.handleMotorDeficit = this.handleMotorDeficit;
-        this.postResults = this.postResults.bind(this)
-    }
+  constructor(props) {
+    super(props);
+    this.showText = this.showText.bind(this);
+    this.handleMotorDeficit = this.handleMotorDeficit;
+    this.postResults = this.postResults.bind(this)
+  }
 
-    showText() {
-        alert("wassup")
-    }
+  showText() {
+    alert("wassup")
+  }
 
-    handleMotorDeficit (e) {
-        this.setState({
-            motorDeficit: e.target.value
-        });
-    }
-    
-    postResults (){
-        console.log("Motor deficit: " + this.state.motorDeficit);
-    }
+  handleMotorDeficit(e) {
+    this.setState({
+      motorDeficit: e.target.value
+    });
+  }
 
-        render() {
-            return (
-                <div>
-            <div className="headline">Motor deficit:</div> <input type="text" name="MotorDeficit" onChange={this.handleMotorDeficit} />
-            <div className="headline">Reflexes:</div>  <input type="text" name="Reflexes" /><br/>
-            <div className="headline">Sensory Deficit: </div>  <input type="text" name="SensoryDeficit" />
-            <div className="headline">Dural Signs: </div><input type="text" name="DuralSigns" /><br/>
-            <button onClick={this.postResults}>Click me!</button>
+  postResults() {
+    console.log("Motor deficit: " + this.state.motorDeficit);
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="row">
+          <form className="col s12"/>
+          <div className="row">
+        <div className="input-field col s6 z-depth-1">
+          <input id="motorDeficit" type="text" className="validate"/>
+          <label for="motorDeficit">Motor Deficit</label>
+          </div>
+        <div className="input-field col s6 z-depth-1">
+          <input id="reflexes" type="text" className="validate"/>
+          <label for="reflexes">Reflexes</label>
+          </div>
         </div>
-            )
-        }
+        
+        <div className="row">
+          <form className="col s12"/>
+          <div className="row">
+        <div className="input-field col s6 z-depth-1">
+          <input id="sensoryDeficit" type="text" className="validate"/>
+          <label for="sensoryDeficit">Sensory Deficit</label>
+          </div>
+        <div className="input-field col s6 z-depth-1">
+          <input id="duralSigns" type="text" className="validate"/>
+          <label for="duralSigns">Dural Signs</label>
+          </div>
+        </div>
+
+        <div className="row">
+          <form className="col s12 offset-s6"/>
+        <button className="btn waves-effect waves-light z-depth-2" type="submit" name="action">Submit
+        </button>
+        </div>
+
+
+        </div>
+        </div>
+        </div>
+    );
+  }
 }
 
 export default Neurological;

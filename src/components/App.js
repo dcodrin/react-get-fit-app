@@ -24,7 +24,6 @@ class App extends React.Component {
     console.log(this.props);
     return (
       <div>
-          HELLO MARS! WE ARE LIVE!
           <Neurological/>
           <Posture/>
           <div>
