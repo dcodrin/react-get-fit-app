@@ -5,7 +5,7 @@ $input-width: 350px;
 
 .input-fields {
     width: $input-width;
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
     height: 25px;
 }
@@ -22,17 +22,22 @@ $input-width: 350px;
     margin: 10px 0 3px 50px;
 }
 
-.image {
-    text-align: center;
+#center {
+    margin: 0 auto 0 auto;
 }
 
-.mainForm {
-    width: 350px;
+.image {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+
+#mainForm {
+    width: 800px;
     margin: 0 auto 0 auto;
 }
 
 .buttonStyle {
-    margin: 10px auto 15px auto;
+    margin: 10px auto 10px auto;
     width: 350px;
     height: 50px;
     background-color: #f46eb1;
