@@ -24,7 +24,6 @@ class Neurological extends React.Component {
 
   render() {
     return (
-      <br/>
       <div>
         <div className="row">
           <form className="col s12"/>

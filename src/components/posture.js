@@ -82,7 +82,6 @@ class Posture extends React.Component {
                         
             </div>
             </div>
-            <br/>
             </div>
         )
     }
