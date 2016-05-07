@@ -1,6 +1,9 @@
 // _client_info.scss
 
 $background-color: #FBF8EF;
+$colOne: #26a69a;
+$colTwo: #F7F2E1;
+$colText: #333;
 $border: 1px solid #999;
 $radius: 4px;
 $padding: 10px 20px;
@@ -11,6 +14,11 @@ $center: 0 auto;
     padding: $padding;
     h1 {
         text-align: center;
+        color: $colOne;
+    }
+    h4 {
+        color: $colOne;
+        padding: 20px 10px 0px;
     }
     img {
         margin: $center;
@@ -26,21 +34,10 @@ $center: 0 auto;
         cursor:pointer;
         background-color: #ff0000;
     }
-    label {
-        margin: 10px 0px;
+    .personalInfo, .address, .phone, .stresses, .disability {
+        background-color:$colTwo;   
     }
-    input, select {
-        margin: 0px 0px 10px 10px;
-        -webkit-border-radius: $radius;
-        -moz-border-radius: $radius;
-        -ms-border-radius: $radius;
-        border-radius: $radius;
-    }
-    option, input {
-        padding: 4px;
-        border: $border;
-    }
-    .question {
-        clear: both;
+    .input-field label {
+        color: $colText;
     }
 }
