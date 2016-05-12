@@ -1,0 +1,35 @@
+{
+  "name": "get_fit_react",
+  "version": "0.0.1",
+  "description": "Client management application for Get Fit Physio.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host $IP --port $PORT  --hot --inline",
+    "sass": "sass --watch src/scss/main.scss:public/css/main.css",
+    "webpack": "webpack --config ./webpack.config.js --watch --progress --colors"
+  },
+  "author": "Codrin Diaconu & Marie Godon",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.7.7",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-hot-loader": "^1.3.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.3.0",
+    "redux": "^3.5.2",
+    "redux-form": "^5.2.2",
+    "redux-promise": "^0.5.3",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "react-materialize": "^0.14.3"
+  }
+}

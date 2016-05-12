@@ -1,0 +1,48 @@
+$primary-color: #f21584;
+$primary-font: sans-serif;
+$bg-color: #ffaae7;
+$input-width: 350px;
+
+.input-fields {
+    width: $input-width;
+    text-align: left;
+    margin-bottom: 10px;
+    height: 25px;
+}
+
+.bg {
+    background-color: $bg-color;
+}
+
+.fields {
+    color: $primary-color;
+    font-family: $primary-font;
+    font-size: 18px;
+    width: 350px;
+    margin: 10px 0 3px 50px;
+}
+
+#center {
+    margin: 0 auto 0 auto;
+}
+
+.image {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+
+#mainForm {
+    width: 800px;
+    margin: 0 auto 0 auto;
+}
+
+.buttonStyle {
+    margin: 10px auto 10px auto;
+    width: 350px;
+    height: 50px;
+    background-color: #f46eb1;
+    border: 3px solid #ffdbea;
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+}
