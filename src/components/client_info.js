@@ -34,16 +34,16 @@ class ClientInfo extends React.Component {
             </div>
               
             <div className = "clientInfo__personalInfo row">
-              <h2>Personal Information</h2>
+              <h1>Personal Information</h1>
               <div className = "clientInfo__personalInfo__question row">
                 
                 <div className="input-field col s12 m6 l6">
-                  <input id="firstName" type="text" class="validate"/>
+                  <input id="firstName" type="text"/>
                   <label for="firstName">First Name</label>
                 </div>
       
                 <div className="input-field col s12 m6 l6">
-                  <input id="lastName" type="text" class="validate"/>
+                  <input id="lastName" type="text" />
                   <label for="lastName">Last Name</label>
                 </div>
                 
@@ -89,7 +89,7 @@ class ClientInfo extends React.Component {
 
 
           <div className = "clientInfo__stresses row">
-            <h2>Stresses and Disabilities</h2>
+            <h1>Stresses and Disabilities</h1>
             <div className = "clientInfo__stresses__question row">
               <div className="input-field col s12">
                 <Input type='select' label="Referral">
@@ -131,7 +131,6 @@ class ClientInfo extends React.Component {
             </div>
             
           </div>
-          
         </div>
       </div>
       

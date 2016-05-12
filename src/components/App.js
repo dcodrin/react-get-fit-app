@@ -3,7 +3,7 @@ import PrincipleOfManagement from './principle_of_management.js';
 import {bindActionCreators} from 'redux';  // object
 import {connect} from 'react-redux';
 import ClientInfo from "./client_info.js";
-
+import History from "./history.js";
 import MouvementLoss from './mouvement_loss.js';
 
 
@@ -45,8 +45,8 @@ class App extends React.Component {
     return (
       <div>
           <ClientInfo prop="value" />
+          <History />
           <TestMovements />
-          HELLO MARS! WE ARE LIVE!
           <SpecificQuestions/>
           <PrincipleOfManagement/>
           <MouvementLoss/>
