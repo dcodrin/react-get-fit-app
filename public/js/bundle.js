@@ -28263,6 +28263,14 @@
 	
 	var _mouvement_loss2 = _interopRequireDefault(_mouvement_loss);
 	
+	var _neurological = __webpack_require__(361);
+	
+	var _neurological2 = _interopRequireDefault(_neurological);
+	
+	var _posture = __webpack_require__(362);
+	
+	var _posture2 = _interopRequireDefault(_posture);
+	
 	var _index = __webpack_require__(307);
 	
 	var _specific_questions = __webpack_require__(308);
@@ -28288,9 +28296,7 @@
 	  function App(props) {
 	    _classCallCheck(this, App);
 	
-	    //We access functions/methods on the object's parent using the super;
-	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
+	    //We access function on the object's parent using the super;
 	
 	    // bind 'this' to my App
 	
@@ -28321,14 +28327,12 @@
 	        _react2.default.createElement(_specific_questions2.default, null),
 	        _react2.default.createElement(_principle_of_management2.default, null),
 	        _react2.default.createElement(_mouvement_loss2.default, null),
+	        _react2.default.createElement(_neurological2.default, null),
+	        _react2.default.createElement(_posture2.default, null),
 	        _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'button',
-	            { onClick: this.onButtonClick },
-	            'Click me!'
-	          )
+	          'button',
+	          { onClick: this.onButtonClick },
+	          'Click me!'
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -28341,6 +28345,9 @@
 	
 	  return App;
 	}(_react2.default.Component);
+	
+	//React components have to have a render method, and it has to return HTML.
+	//This is actually .JSX, Facebook's proprietary HTML copy.
 	
 	function mapDispatchToProps(dispatch) {
 	  return (0, _redux.bindActionCreators)({ updateCount: _index.updateCount }, dispatch);
@@ -36995,6 +37002,308 @@
 	}(_react2.default.Component);
 	
 	exports.default = ClientInfo;
+
+/***/ },
+/* 361 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Neurological = function (_React$Component) {
+	  _inherits(Neurological, _React$Component);
+	
+	  function Neurological(props) {
+	    _classCallCheck(this, Neurological);
+	
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Neurological).call(this, props));
+	
+	    _this.showText = _this.showText.bind(_this);
+	    _this.handleMotorDeficit = _this.handleMotorDeficit;
+	    _this.postResults = _this.postResults.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(Neurological, [{
+	    key: "showText",
+	    value: function showText() {
+	      alert("wassup");
+	    }
+	  }, {
+	    key: "handleMotorDeficit",
+	    value: function handleMotorDeficit(e) {
+	      this.setState({
+	        motorDeficit: e.target.value
+	      });
+	    }
+	  }, {
+	    key: "postResults",
+	    value: function postResults() {
+	      console.log("Motor deficit: " + this.state.motorDeficit);
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "div",
+	          { className: "row" },
+	          _react2.default.createElement("form", { className: "col s12" }),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "row" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "input-field col s6 z-depth-1" },
+	              _react2.default.createElement("input", { id: "motorDeficit", type: "text", className: "validate" }),
+	              _react2.default.createElement(
+	                "label",
+	                { "for": "motorDeficit" },
+	                "Motor Deficit"
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "input-field col s6 z-depth-1" },
+	              _react2.default.createElement("input", { id: "reflexes", type: "text", className: "validate" }),
+	              _react2.default.createElement(
+	                "label",
+	                { "for": "reflexes" },
+	                "Reflexes"
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "row" },
+	            _react2.default.createElement("form", { className: "col s12" }),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "row" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "input-field col s6 z-depth-1" },
+	                _react2.default.createElement("input", { id: "sensoryDeficit", type: "text", className: "validate" }),
+	                _react2.default.createElement(
+	                  "label",
+	                  { "for": "sensoryDeficit" },
+	                  "Sensory Deficit"
+	                )
+	              ),
+	              _react2.default.createElement(
+	                "div",
+	                { className: "input-field col s6 z-depth-1" },
+	                _react2.default.createElement("input", { id: "duralSigns", type: "text", className: "validate" }),
+	                _react2.default.createElement(
+	                  "label",
+	                  { "for": "duralSigns" },
+	                  "Dural Signs"
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "row" },
+	              _react2.default.createElement("form", { className: "col s12 offset-s6" }),
+	              _react2.default.createElement(
+	                "button",
+	                { className: "btn waves-effect waves-light z-depth-2", type: "submit", name: "action" },
+	                "Submit"
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Neurological;
+	}(_react2.default.Component);
+	
+	exports.default = Neurological;
+	
+	/*
+	1bundle.js:28337 Uncaught TypeError: Cannot read property 'setState' of undefinedReactErrorUtils.invokeGuardedCallback @ bundle.js:5775
+	bundle.js:28344 Uncaught TypeError: Cannot read property 'motorDeficit' of nullReactErrorUtils.invokeGuardedCallback @ bundle.js:5775
+	*/
+
+/***/ },
+/* 362 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactMaterialize = __webpack_require__(267);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Posture = function (_React$Component) {
+	    _inherits(Posture, _React$Component);
+	
+	    function Posture() {
+	        _classCallCheck(this, Posture);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Posture).apply(this, arguments));
+	    }
+	
+	    _createClass(Posture, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'row' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col s3' },
+	                        'Sitting'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col s3' },
+	                        'Standing'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col s3' },
+	                        'Lordosis'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col s3' },
+	                        'Lateral Shift'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'row' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col s3' },
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'sitting', type: 'radio', value: 'good', label: 'Good', className: 'with-gap' }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'sitting', type: 'radio', value: 'fair', label: 'Fair', className: 'with-gap' }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'sitting', type: 'radio', value: 'poor', label: 'Poor', className: 'with-gap' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col s3' },
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'standing', type: 'radio', value: 'good', label: 'Good', className: 'with-gap' }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'standing', type: 'radio', value: 'fair', label: 'Fair', className: 'with-gap' }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'standing', type: 'radio', value: 'poor', label: 'Poor', className: 'with-gap' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col s3' },
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lordosis', type: 'radio', value: 'red', label: 'Red', className: 'with-gap' }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lordosis', type: 'radio', value: 'acc', label: 'Acc', className: 'with-gap' }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lordosis', type: 'radio', value: 'normal', label: 'Normal', className: 'with-gap' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col s3' },
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lateralShift', type: 'radio', value: 'right', label: 'Right', className: 'with-gap' }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lateralShift', type: 'radio', value: 'left', label: 'Left', className: 'with-gap' }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lateralShift', type: 'radio', value: 'nil', label: 'Nil', className: 'with-gap' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'row' },
+	                        _react2.default.createElement('form', { className: 'col s12' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col s4' },
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    { 'class': 'fixme' },
+	                                    'Correction of Posture:'
+	                                ),
+	                                _react2.default.createElement('br', null),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'better', label: 'Better', className: 'with-gap' }),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'worse', label: 'Worse', className: 'with-gap' }),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'noEffect', label: 'No Effect', className: 'with-gap' })
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'input-field col s4 z-depth-1' },
+	                                _react2.default.createElement('input', { id: 'noEffect', type: 'text', className: 'validate' }),
+	                                _react2.default.createElement(
+	                                    'label',
+	                                    { 'for': 'noEffect' },
+	                                    'Notes: No Effect'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col s4' },
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'relevant', label: 'Relevant' }),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'notRelevant', label: 'Not Relevant' })
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement('form', { className: 'col s12' }),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'input-field col s12 z-depth-1' },
+	                                _react2.default.createElement('input', { id: 'otherObservations', type: 'text', className: 'validate' }),
+	                                _react2.default.createElement(
+	                                    'label',
+	                                    { 'for': 'otherObservations' },
+	                                    'Other observations'
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Posture;
+	}(_react2.default.Component);
+	
+	exports.default = Posture;
 
 /***/ }
 /******/ ]);

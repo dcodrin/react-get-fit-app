@@ -7,6 +7,8 @@ import ClientInfo from "./client_info.js";
 import MouvementLoss from './mouvement_loss.js';
 
 
+import Neurological from './neurological.js';
+import Posture from './posture.js';
 
 import {updateCount} from '../actions/index';
 import SpecificQuestions from './specific_questions.js';
@@ -23,21 +25,17 @@ class App extends React.Component {
 
 
     super(props);
+    //We access function on the object's parent using the super;
 
 
-    //We access functions/methods on the object's parent using the super;
-    super(props);
     // bind 'this' to my App
-
     this.onButtonClick = this.onButtonClick.bind(this);
-
 
   }
 
   onButtonClick(){
     this.props.updateCount();
   }
-
 
 
 
@@ -52,9 +50,10 @@ class App extends React.Component {
           <SpecificQuestions/>
           <PrincipleOfManagement/>
           <MouvementLoss/>
-          <div>
-            <button onClick={this.onButtonClick}>Click me!</button>
-          </div>
+          <Neurological/>
+          <Posture/>
+
+          <button onClick={this.onButtonClick}>Click me!</button>
           <div>
             {this.props.count}
           </div>
@@ -62,8 +61,12 @@ class App extends React.Component {
     );
   }
 }
+          
 
 
+
+//React components have to have a render method, and it has to return HTML.
+//This is actually .JSX, Facebook's proprietary HTML copy.
 
 function mapDispatchToProps(dispatch){
   return bindActionCreators({updateCount}, dispatch);
