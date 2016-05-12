@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import MouvementLoss from './mouvement_loss.js';
 
-import ClientInfo from "./client_info.js";
+//import ClientInfo from "./client_info.js";
 
 
 import {updateCount} from '../actions/index';
@@ -37,7 +37,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-          <ClientInfo prop="value" />
           <TestMovements />
           HELLO MARS! WE ARE LIVE!
           <SpecificQuestions/>
