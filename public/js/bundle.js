@@ -28255,6 +28255,10 @@
 	
 	var _reactRedux = __webpack_require__(169);
 	
+	var _client_info = __webpack_require__(360);
+	
+	var _client_info2 = _interopRequireDefault(_client_info);
+	
 	var _mouvement_loss = __webpack_require__(266);
 	
 	var _mouvement_loss2 = _interopRequireDefault(_mouvement_loss);
@@ -28278,13 +28282,17 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // object
 	
 	
-	//import ClientInfo from "./client_info.js";
-	
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 	
 	  function App(props) {
 	    _classCallCheck(this, App);
+	
+	    //We access functions/methods on the object's parent using the super;
+	
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
+	
+	    // bind 'this' to my App
 	
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
 	
@@ -28298,12 +28306,16 @@
 	    value: function onButtonClick() {
 	      this.props.updateCount();
 	    }
+	
+	    // React components MUST have a render methods and this MUST always return HTML. The 'html' below is actually jsx
+	
 	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement(_client_info2.default, { prop: 'value' }),
 	        _react2.default.createElement(_test_movements2.default, null),
 	        'HELLO MARS! WE ARE LIVE!',
 	        _react2.default.createElement(_specific_questions2.default, null),
@@ -36628,6 +36640,361 @@
 	var _index = __webpack_require__(307);
 	
 	var INITIAL_STATE = 0;
+
+/***/ },
+/* 360 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactMaterialize = __webpack_require__(267);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ClientInfo = function (_React$Component) {
+	  _inherits(ClientInfo, _React$Component);
+	
+	  function ClientInfo(props) {
+	    _classCallCheck(this, ClientInfo);
+	
+	    // bind 'this' to my App
+	
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ClientInfo).call(this, props));
+	    //We access functions/methods on the object's parent using the super;
+	
+	
+	    _this.alertText = _this.alertText.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(ClientInfo, [{
+	    key: 'alertText',
+	    value: function alertText() {
+	      alert("blah blah blah");
+	    }
+	
+	    // runs JS once my component has mounted
+	
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      $('.datepicker').pickadate({
+	        selectMonths: true, // Creates a dropdown to control month
+	        selectYears: 15 // Creates a dropdown of 15 years to control year
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'clientInfo row' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col s12' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Client Information'
+	          ),
+	          _react2.default.createElement('img', { src: 'http://i236.photobucket.com/albums/ff256/Duda_Martins/Gifs%20Duda/kao08022.gif', border: '0', alt: 'Click me! Gif photo: Click kao08022.gif', onClick: this.alertText }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row personalInfo' },
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Your Name'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'question row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s6' },
+	                _react2.default.createElement('input', { id: 'firstName', type: 'text', 'class': 'validate' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'firstName' },
+	                  'First Name'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s6' },
+	                _react2.default.createElement('input', { id: 'lastName', type: 'text', 'class': 'validate' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'lastName' },
+	                  'Last Name'
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'question row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s6' },
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'date' },
+	                  'Today\'s Date: '
+	                ),
+	                _react2.default.createElement('input', { type: 'date', className: 'datepicker' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s6' },
+	                _react2.default.createElement(_reactMaterialize.Input, { name: 'gender', type: 'radio', value: 'female', label: 'female' }),
+	                _react2.default.createElement(_reactMaterialize.Input, { name: 'gender', type: 'radio', value: 'male', label: 'male' }),
+	                _react2.default.createElement(_reactMaterialize.Input, { name: 'gender', type: 'radio', value: 'other', label: 'other' })
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row address' },
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Your Address'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'question row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s12' },
+	                _react2.default.createElement('input', { id: 'streetAddress', type: 'text' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'streetAddress' },
+	                  'Street Address: '
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'question row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s3' },
+	                _react2.default.createElement('input', { id: 'city', type: 'text' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'City' },
+	                  'City: '
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s3' },
+	                _react2.default.createElement('input', { id: 'province', type: 'text' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'province' },
+	                  'Province: '
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s3' },
+	                _react2.default.createElement('input', { id: 'postalCode', type: 'text' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'postalCode' },
+	                  'Postal Code: '
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s3' },
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'country' },
+	                  'Country: '
+	                ),
+	                _react2.default.createElement('input', { id: 'country', type: 'text' })
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row phone' },
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Your Contact Details'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'question row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s4' },
+	                _react2.default.createElement('input', { id: 'telephone', type: 'tel' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'telephone' },
+	                  'Telephone: '
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s4' },
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'dob' },
+	                  'Date of Birth: '
+	                ),
+	                _react2.default.createElement('input', { type: 'date', className: 'datepicker' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s4' },
+	                _react2.default.createElement('input', { id: 'age', type: 'number', min: '0', max: '120' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'age' },
+	                  'Age: '
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row stresses' },
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Your Stresses'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'question row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s12' },
+	                _react2.default.createElement(
+	                  _reactMaterialize.Input,
+	                  { type: 'select', label: 'Select a referer' },
+	                  _react2.default.createElement(
+	                    'option',
+	                    { value: 'gp' },
+	                    'GP'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    { value: 'orth' },
+	                    'Orth'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    { value: 'self' },
+	                    'Self'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    { value: 'other' },
+	                    'Other'
+	                  )
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'question row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s6' },
+	                _react2.default.createElement('textarea', { id: 'workStresses', className: 'materialize-textarea' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'workStresses' },
+	                  'Work - Mechanical Stresses:'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s6' },
+	                _react2.default.createElement('textarea', { id: 'leisureStresses', className: 'materialize-textarea' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'leisureStresses' },
+	                  'Leisure - Mechanical Stresses:'
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row disability' },
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Your Disability'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'question row' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s6' },
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'disabilityPresent' },
+	                  'Functional Disability from present episode: '
+	                ),
+	                _react2.default.createElement('textarea', { id: 'disabilityPresent', className: 'materialize-textarea' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s3' },
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'disabilityScore' },
+	                  'Functional Disability Score: '
+	                ),
+	                _react2.default.createElement('input', { id: 'disabilityScore', type: 'number', min: '1', max: '10' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s3' },
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'vas' },
+	                  'VAS Score (0-10): '
+	                ),
+	                _react2.default.createElement('input', { id: 'vas', type: 'number', min: '1', max: '10' })
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ClientInfo;
+	}(_react2.default.Component);
+	
+	exports.default = ClientInfo;
 
 /***/ }
 /******/ ]);

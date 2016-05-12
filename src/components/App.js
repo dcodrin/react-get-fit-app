@@ -2,10 +2,10 @@ import React from 'react';
 import PrincipleOfManagement from './principle_of_management.js';
 import {bindActionCreators} from 'redux';  // object
 import {connect} from 'react-redux';
+import ClientInfo from "./client_info.js";
 
 import MouvementLoss from './mouvement_loss.js';
 
-//import ClientInfo from "./client_info.js";
 
 
 import {updateCount} from '../actions/index';
@@ -21,8 +21,13 @@ class App extends React.Component {
 
   constructor(props){
 
+
     super(props);
 
+
+    //We access functions/methods on the object's parent using the super;
+    super(props);
+    // bind 'this' to my App
 
     this.onButtonClick = this.onButtonClick.bind(this);
 
@@ -34,9 +39,14 @@ class App extends React.Component {
   }
 
 
+
+
+  // React components MUST have a render methods and this MUST always return HTML. The 'html' below is actually jsx
+
   render() {
     return (
       <div>
+          <ClientInfo prop="value" />
           <TestMovements />
           HELLO MARS! WE ARE LIVE!
           <SpecificQuestions/>
@@ -48,7 +58,6 @@ class App extends React.Component {
           <div>
             {this.props.count}
           </div>
-
       </div>
     );
   }

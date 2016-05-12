@@ -1,0 +1,43 @@
+// _client_info.scss
+
+$background-color: #FBF8EF;
+$colOne: #26a69a;
+$colTwo: #F7F2E1;
+$colText: #333;
+$border: 1px solid #999;
+$radius: 4px;
+$padding: 10px 20px;
+$center: 0 auto;
+
+.clientInfo {
+    background-color: $background-color;
+    padding: $padding;
+    h1 {
+        text-align: center;
+        color: $colOne;
+    }
+    h4 {
+        color: $colOne;
+        padding: 20px 10px 0px;
+    }
+    img {
+        margin: $center;
+        display: block;
+        border-radius: 50%;
+        border: $border;
+        padding: 30px;
+        background-color: #2E9AFE;
+        overflow:visible;
+        margin-bottom: 30px;
+    }
+    img:hover {
+        cursor:pointer;
+        background-color: #ff0000;
+    }
+    .personalInfo, .address, .phone, .stresses, .disability {
+        background-color:$colTwo;   
+    }
+    .input-field label {
+        color: $colText;
+    }
+}
