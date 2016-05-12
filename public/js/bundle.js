@@ -36680,25 +36680,16 @@
 	  function ClientInfo(props) {
 	    _classCallCheck(this, ClientInfo);
 	
-	    // bind 'this' to my App
-	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ClientInfo).call(this, props));
 	    //We access functions/methods on the object's parent using the super;
-	
-	
-	    _this.alertText = _this.alertText.bind(_this);
-	    return _this;
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(ClientInfo).call(this, props));
+	    // bind 'this' to my App
+	    //this.alertText = this.alertText.bind(this);
 	  }
 	
+	  // runs JS once my component has mounted
+	
+	
 	  _createClass(ClientInfo, [{
-	    key: 'alertText',
-	    value: function alertText() {
-	      alert("blah blah blah");
-	    }
-	
-	    // runs JS once my component has mounted
-	
-	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      $('.datepicker').pickadate({
@@ -36711,30 +36702,38 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'clientInfo row' },
+	        { className: 'clientInfo row container' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col s12' },
 	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Client Information'
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-field col s12 m3 l3' },
+	              _react2.default.createElement(
+	                'label',
+	                { 'for': 'date' },
+	                'Date'
+	              ),
+	              _react2.default.createElement('input', { type: 'date', className: 'datepicker' })
+	            )
 	          ),
-	          _react2.default.createElement('img', { src: 'http://i236.photobucket.com/albums/ff256/Duda_Martins/Gifs%20Duda/kao08022.gif', border: '0', alt: 'Click me! Gif photo: Click kao08022.gif', onClick: this.alertText }),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'row personalInfo' },
+	            { className: 'clientInfo__personalInfo row' },
 	            _react2.default.createElement(
-	              'h4',
+	              'h2',
 	              null,
-	              'Your Name'
+	              'Personal Information'
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'question row' },
+	              { className: 'clientInfo__personalInfo__question row' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'input-field col s6' },
+	                { className: 'input-field col s12 m6 l6' },
 	                _react2.default.createElement('input', { id: 'firstName', type: 'text', 'class': 'validate' }),
 	                _react2.default.createElement(
 	                  'label',
@@ -36744,7 +36743,7 @@
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'input-field col s6' },
+	                { className: 'input-field col s12 m6 l6' },
 	                _react2.default.createElement('input', { id: 'lastName', type: 'text', 'class': 'validate' }),
 	                _react2.default.createElement(
 	                  'label',
@@ -36755,20 +36754,30 @@
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'question row' },
+	              { className: 'clientInfo__personalInfo__question row' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'input-field col s6' },
+	                { className: 'input-field col s6 m4 l4' },
 	                _react2.default.createElement(
 	                  'label',
-	                  { 'for': 'date' },
-	                  'Today\'s Date: '
+	                  { 'for': 'dob' },
+	                  'Date of Birth'
 	                ),
 	                _react2.default.createElement('input', { type: 'date', className: 'datepicker' })
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'input-field col s6' },
+	                { className: 'input-field col s6 m4 l4' },
+	                _react2.default.createElement('input', { id: 'age', type: 'number', min: '0', max: '105' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { 'for': 'age' },
+	                  'Age'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'input-field col s12 m4 l4' },
 	                _react2.default.createElement(_reactMaterialize.Input, { name: 'gender', type: 'radio', value: 'female', label: 'female' }),
 	                _react2.default.createElement(_reactMaterialize.Input, { name: 'gender', type: 'radio', value: 'male', label: 'male' }),
 	                _react2.default.createElement(_reactMaterialize.Input, { name: 'gender', type: 'radio', value: 'other', label: 'other' })
@@ -36777,15 +36786,10 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'row address' },
-	            _react2.default.createElement(
-	              'h4',
-	              null,
-	              'Your Address'
-	            ),
+	            { className: 'clientInfo__contact row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'question row' },
+	              { className: 'clientInfo__contact__question row' },
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'input-field col s12' },
@@ -36793,115 +36797,50 @@
 	                _react2.default.createElement(
 	                  'label',
 	                  { 'for': 'streetAddress' },
-	                  'Street Address: '
+	                  'Address'
 	                )
 	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'question row' },
+	              { className: 'clientInfo__contact__question row' },
 	              _react2.default.createElement(
-	                'div',
-	                { className: 'input-field col s3' },
-	                _react2.default.createElement('input', { id: 'city', type: 'text' }),
+	                _reactMaterialize.Input,
+	                { s: 12, m: 6, l: 6, label: 'Telephone', validate: true, type: 'tel' },
 	                _react2.default.createElement(
-	                  'label',
-	                  { 'for': 'City' },
-	                  'City: '
+	                  _reactMaterialize.Icon,
+	                  null,
+	                  'phone'
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'div',
-	                { className: 'input-field col s3' },
-	                _react2.default.createElement('input', { id: 'province', type: 'text' }),
+	                _reactMaterialize.Input,
+	                { s: 12, m: 6, l: 6, label: 'Email', validate: true, type: 'email' },
 	                _react2.default.createElement(
-	                  'label',
-	                  { 'for': 'province' },
-	                  'Province: '
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'input-field col s3' },
-	                _react2.default.createElement('input', { id: 'postalCode', type: 'text' }),
-	                _react2.default.createElement(
-	                  'label',
-	                  { 'for': 'postalCode' },
-	                  'Postal Code: '
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'input-field col s3' },
-	                _react2.default.createElement(
-	                  'label',
-	                  { 'for': 'country' },
-	                  'Country: '
-	                ),
-	                _react2.default.createElement('input', { id: 'country', type: 'text' })
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'row phone' },
-	            _react2.default.createElement(
-	              'h4',
-	              null,
-	              'Your Contact Details'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'question row' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'input-field col s4' },
-	                _react2.default.createElement('input', { id: 'telephone', type: 'tel' }),
-	                _react2.default.createElement(
-	                  'label',
-	                  { 'for': 'telephone' },
-	                  'Telephone: '
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'input-field col s4' },
-	                _react2.default.createElement(
-	                  'label',
-	                  { 'for': 'dob' },
-	                  'Date of Birth: '
-	                ),
-	                _react2.default.createElement('input', { type: 'date', className: 'datepicker' })
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'input-field col s4' },
-	                _react2.default.createElement('input', { id: 'age', type: 'number', min: '0', max: '120' }),
-	                _react2.default.createElement(
-	                  'label',
-	                  { 'for': 'age' },
-	                  'Age: '
+	                  _reactMaterialize.Icon,
+	                  null,
+	                  'email'
 	                )
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'row stresses' },
+	            { className: 'clientInfo__stresses row' },
 	            _react2.default.createElement(
-	              'h4',
+	              'h2',
 	              null,
-	              'Your Stresses'
+	              'Stresses and Disabilities'
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'question row' },
+	              { className: 'clientInfo__stresses__question row' },
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'input-field col s12' },
 	                _react2.default.createElement(
 	                  _reactMaterialize.Input,
-	                  { type: 'select', label: 'Select a referer' },
+	                  { type: 'select', label: 'Referral' },
 	                  _react2.default.createElement(
 	                    'option',
 	                    { value: 'gp' },
@@ -36927,7 +36866,7 @@
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'question row' },
+	              { className: 'clientInfo__stresses__question row' },
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'input-field col s6' },
@@ -36935,7 +36874,7 @@
 	                _react2.default.createElement(
 	                  'label',
 	                  { 'for': 'workStresses' },
-	                  'Work - Mechanical Stresses:'
+	                  'Work - Mechanical Stresses'
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -36945,51 +36884,42 @@
 	                _react2.default.createElement(
 	                  'label',
 	                  { 'for': 'leisureStresses' },
-	                  'Leisure - Mechanical Stresses:'
+	                  'Leisure - Mechanical Stresses'
 	                )
 	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'row disability' },
-	            _react2.default.createElement(
-	              'h4',
-	              null,
-	              'Your Disability'
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'question row' },
+	              { className: 'clientInfo__stresses__question row' },
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'input-field col s6' },
 	                _react2.default.createElement(
 	                  'label',
 	                  { 'for': 'disabilityPresent' },
-	                  'Functional Disability from present episode: '
+	                  'Functional Disability from present episode'
 	                ),
 	                _react2.default.createElement('textarea', { id: 'disabilityPresent', className: 'materialize-textarea' })
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'input-field col s3' },
+	                { className: 'input-field clientInfo__stresses__question__fds col s3' },
 	                _react2.default.createElement(
 	                  'label',
 	                  { 'for': 'disabilityScore' },
-	                  'Functional Disability Score: '
+	                  'Functional Disability Score'
 	                ),
-	                _react2.default.createElement('input', { id: 'disabilityScore', type: 'number', min: '1', max: '10' })
+	                _react2.default.createElement('input', { id: 'disabilityScore', type: 'number', min: '0', max: '10' })
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'input-field col s3' },
+	                { className: 'input-field clientInfo__stresses__question__vas col s3' },
 	                _react2.default.createElement(
 	                  'label',
 	                  { 'for': 'vas' },
-	                  'VAS Score (0-10): '
+	                  'VAS Score (0-10)'
 	                ),
-	                _react2.default.createElement('input', { id: 'vas', type: 'number', min: '1', max: '10' })
+	                _react2.default.createElement('input', { id: 'vas', type: 'number', min: '0', max: '10' })
 	              )
 	            )
 	          )
