@@ -6,7 +6,6 @@ import ClientInfo from "./client_info.js";
 import History from "./history.js";
 import MouvementLoss from './mouvement_loss.js';
 
-
 import Neurological from './neurological.js';
 import Posture from './posture.js';
 
@@ -15,7 +14,7 @@ import SpecificQuestions from './specific_questions.js';
 
 
 
-import TestMovements from './test_movements.js'
+import TestMovements from './test_movements.js';
 
 
 class App extends React.Component {

@@ -1,0 +1,54 @@
+.history{
+    
+    h1{
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 2em;
+        font-weight: lighter;
+        text-align: right;
+        padding: 0.5em 1em 0 0;
+    }
+    
+    
+    &__radioRow__radioCol {
+        margin-top: 2em;
+        
+        &.noReason {
+            padding: 0;
+        }
+    
+        &__presentSince {
+            margin-top: 2em;
+            padding: 0 2em;    
+        }
+        
+    }
+    
+   &__or { 
+        font-size: 2em;
+        font-weight: 200;
+        text-align: center;
+        margin-top: 0.6em;
+   }
+   
+   &__betterWorse__checkRow {
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       padding-right: 0.8em;
+   }
+   
+   &__betterWorse__radioRow {
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       
+       &__actionWorse {
+           display: flex;
+           justify-content: flex-end;
+       }
+   }
+    
+}    
