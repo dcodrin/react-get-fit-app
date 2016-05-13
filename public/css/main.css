@@ -6271,15 +6271,35 @@ caption {
   text-align: right;
   padding-right: 5em; }
 
-.specificQuestions h1 {
-  font-size: 2em; }
-.specificQuestions h2 {
+.staticOtherTests__firstCol.col {
+  padding: 0; }
+.staticOtherTests h1 {
+  font-size: 2em;
+  margin-left: 0.75rem; }
+
+.provisionalClass__firstCol.col {
+  padding: 0; }
+.provisionalClass h1 {
+  font-size: 2em;
+  margin-left: 0.75rem; }
+
+.principleManagement__firstCol.col {
+  padding: 0; }
+.principleManagement h1 {
+  font-size: 2em;
+  margin-left: 0.75rem; }
+.principleManagement h2 {
   font-size: 1.6em;
   font-weight: 300; }
-.specificQuestions__checkRow {
-  display: flex;
-  flex-wrap: wrap; }
-.specificQuestions__bladderGait h2 {
-  margin-right: 1em; }
+
+.movementLoss__firstCol.col {
+  padding: 0; }
+.movementLoss h1 {
+  font-size: 2em;
+  margin-left: 0.75rem; }
+.movementLoss h2 {
+  font-size: 1.6em;
+  font-weight: 300;
+  text-align: right; }
 
 /*# sourceMappingURL=main.css.map */

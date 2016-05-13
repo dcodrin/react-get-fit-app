@@ -15,7 +15,7 @@ class During extends React.Component {
                         <option value="7">peripheralising</option>
                     </Input>
                 </td>
-        )
+        );
     }
 }
 
@@ -33,7 +33,7 @@ class After extends React.Component {
                         <option value="7">peripheralised</option>
                     </Input>
                 </td>
-        )
+        );
     }
 }
 
@@ -46,29 +46,16 @@ class MechanicalRes extends React.Component {
                     <Input name={"mechRes"+this.props.row} type='radio' value='NoEff' label='no effect' />
                 </td>
             
-            )
+            );
     }
 }
-
-//my first component created with react
 
 class TestMovements extends React.Component {
     
     constructor(props){
-    //We access function on the object's parent using the super;
+
     super(props);
     
-    this.showText = this.showText.bind(this);
-    }
-    
-    showText() {
-        alert('wassup');
-    }
-    
-    componentDidMount(){
-         $(document).ready(function() {
-    $('select').material_select();
-  });
     }
     
     render() {
@@ -76,7 +63,7 @@ class TestMovements extends React.Component {
         
         return (
             
-            <div className = "row">
+            <div className = "row container">
             <table className = "symptomsTable">
                 <caption><span className = "title">Test Movements</span> <span className = "subtitle">describe effect on present pain</span></caption>
                 <thead>

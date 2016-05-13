@@ -28147,10 +28147,6 @@
 	
 	var _redux = __webpack_require__(176);
 	
-	var _principle_of_management = __webpack_require__(263);
-	
-	var _principle_of_management2 = _interopRequireDefault(_principle_of_management);
-	
 	var _client_info = __webpack_require__(264);
 	
 	var _client_info2 = _interopRequireDefault(_client_info);
@@ -28174,6 +28170,18 @@
 	var _test_movements = __webpack_require__(311);
 	
 	var _test_movements2 = _interopRequireDefault(_test_movements);
+	
+	var _static_other_tests = __webpack_require__(359);
+	
+	var _static_other_tests2 = _interopRequireDefault(_static_other_tests);
+	
+	var _provisional_class = __webpack_require__(360);
+	
+	var _provisional_class2 = _interopRequireDefault(_provisional_class);
+	
+	var _principle_of_management = __webpack_require__(263);
+	
+	var _principle_of_management2 = _interopRequireDefault(_principle_of_management);
 	
 	var _specific_questions = __webpack_require__(310);
 	
@@ -28218,6 +28226,8 @@
 	        _react2.default.createElement(_posture2.default, null),
 	        _react2.default.createElement(_neurological2.default, null),
 	        _react2.default.createElement(_test_movements2.default, null),
+	        _react2.default.createElement(_static_other_tests2.default, null),
+	        _react2.default.createElement(_provisional_class2.default, null),
 	        _react2.default.createElement(_principle_of_management2.default, null),
 	        _react2.default.createElement(_mouvement_loss2.default, null)
 	      );
@@ -28248,7 +28258,7 @@
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -28256,6 +28266,8 @@
 	var _react = __webpack_require__(2);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactMaterialize = __webpack_require__(265);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -28265,232 +28277,83 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	// ES6, to use with webpack / same as require in node
-	
 	var PrincipleOfManagement = function (_React$Component) {
-	  _inherits(PrincipleOfManagement, _React$Component);
+		_inherits(PrincipleOfManagement, _React$Component);
 	
-	  function PrincipleOfManagement(props) {
-	    _classCallCheck(this, PrincipleOfManagement);
+		function PrincipleOfManagement(props) {
+			_classCallCheck(this, PrincipleOfManagement);
 	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PrincipleOfManagement).call(this, props));
-	    //We access function on the object's parent using the super;
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(PrincipleOfManagement).call(this, props));
+		}
 	
+		_createClass(PrincipleOfManagement, [{
+			key: "render",
+			value: function render() {
 	
-	    _this.alertButton = _this.alertButton.bind(_this);
-	    return _this;
-	  }
+				return _react2.default.createElement(
+					"div",
+					{ className: "principleManagement row container" },
+					_react2.default.createElement(
+						"div",
+						{ className: "principleManagement__firstCol col s12" },
+						_react2.default.createElement(
+							"div",
+							{ className: "row" },
+							_react2.default.createElement(
+								"h1",
+								null,
+								"Principle Of Management"
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "row" },
+							_react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Education" }),
+							_react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Equipment Provided" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "row valign-wrapper" },
+							_react2.default.createElement(
+								"div",
+								{ className: "col s6 m3 l3" },
+								_react2.default.createElement(
+									"h2",
+									null,
+									"Mechanical Therapy"
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "col s6 m3 l3" },
+								_react2.default.createElement(_reactMaterialize.Input, { name: "mechanicalTherapy", type: "radio", value: "yes", label: "yes" }),
+								_react2.default.createElement(_reactMaterialize.Input, { name: "mechanicalTherapy", type: "radio", value: "no", label: "no" })
+							),
+							_react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6 })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "row" },
+							_react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Extension Principle" }),
+							_react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Lateral Principle" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "row" },
+							_react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Flexion Principle" }),
+							_react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Other" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "row" },
+							_react2.default.createElement(_reactMaterialize.Input, { s: 12, label: "Treatment Goals" })
+						)
+					)
+				);
+			}
+		}]);
 	
-	  _createClass(PrincipleOfManagement, [{
-	    key: "alertButton",
-	    value: function alertButton() {
-	      alert("Hello!!!!!!!");
-	    }
-	  }, {
-	    key: "alertButton2",
-	    value: function alertButton2() {
-	      alert("Thanks pal!");
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "bg" },
-	        _react2.default.createElement(
-	          "div",
-	          { className: "row", id: "mainForm" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "row", id: "center" },
-	            _react2.default.createElement("div", { className: "input-field col s3" }),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "input-field col s6" },
-	              _react2.default.createElement("img", { className: "image", src: "http://data.whicdn.com/images/72152445/original.gif" })
-	            ),
-	            _react2.default.createElement("div", { className: "input-field col s3" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "row", id: "center" },
-	            _react2.default.createElement("div", { className: "input-field col s3" }),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "input-field col s6" },
-	              _react2.default.createElement(
-	                "button",
-	                { className: "buttonStyle", onClick: this.alertButton },
-	                "Make the unicorn talk! ^-^"
-	              )
-	            ),
-	            _react2.default.createElement("div", { className: "input-field col s3" })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "row" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "col s12" },
-	              _react2.default.createElement(
-	                "div",
-	                { className: "row" },
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s6" },
-	                  _react2.default.createElement("input", { id: "education", type: "text", className: "validate" }),
-	                  _react2.default.createElement(
-	                    "label",
-	                    { "for": "education" },
-	                    "Education"
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s6" },
-	                  _react2.default.createElement("input", { id: "equipment_provided", type: "text", "class": "validate" }),
-	                  _react2.default.createElement(
-	                    "label",
-	                    { "for": "equipment_provided" },
-	                    "Equipment Provided"
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "div",
-	                { className: "row" },
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s8" },
-	                  _react2.default.createElement("input", { id: "mechanical_therapy", type: "text", className: "validate" }),
-	                  _react2.default.createElement(
-	                    "label",
-	                    { "for": "mechanical_therapy" },
-	                    "Mechanical Therapy"
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s2" },
-	                  _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    _react2.default.createElement("input", { name: "choice", type: "radio", id: "test1" }),
-	                    _react2.default.createElement(
-	                      "label",
-	                      { "for": "test1" },
-	                      "YES"
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s2" },
-	                  _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    _react2.default.createElement("input", { name: "choice", type: "radio", id: "test1" }),
-	                    _react2.default.createElement(
-	                      "label",
-	                      { "for": "test1" },
-	                      "NO"
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "div",
-	                { className: "row" },
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s12" },
-	                  _react2.default.createElement("input", { id: "extension_principle", type: "text", className: "validate" }),
-	                  _react2.default.createElement(
-	                    "label",
-	                    { "for": "extension_principle" },
-	                    "Extension Principle"
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "div",
-	                { className: "row" },
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s12" },
-	                  _react2.default.createElement("input", { id: "lateral_principle", type: "text", className: "validate" }),
-	                  _react2.default.createElement(
-	                    "label",
-	                    { "for": "lateral_principle" },
-	                    "Lateral Principle"
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "div",
-	                { className: "row" },
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s12" },
-	                  _react2.default.createElement("input", { id: "flexion_principle", type: "text", className: "validate" }),
-	                  _react2.default.createElement(
-	                    "label",
-	                    { "for": "flexion_principle" },
-	                    "Flexion Principle"
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "div",
-	                { className: "row" },
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s12" },
-	                  _react2.default.createElement("textarea", { id: "other", "class": "materialize-textarea" }),
-	                  _react2.default.createElement(
-	                    "label",
-	                    { "for": "other" },
-	                    "Other"
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "div",
-	                { className: "row" },
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s12" },
-	                  _react2.default.createElement("input", { id: "treatment_goals", type: "text", className: "validate" }),
-	                  _react2.default.createElement(
-	                    "label",
-	                    { "for": "treatment_goals" },
-	                    "Treatment Goals"
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "div",
-	                { className: "row" },
-	                _react2.default.createElement("div", { className: "input-field col s3" }),
-	                _react2.default.createElement(
-	                  "div",
-	                  { className: "input-field col s6", id: "center" },
-	                  _react2.default.createElement(
-	                    "button",
-	                    { className: "buttonStyle", onClick: this.alertButton2 },
-	                    "Send your infos to the unicorn~"
-	                  )
-	                ),
-	                _react2.default.createElement("div", { className: "input-field col s3" })
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return PrincipleOfManagement;
+		return PrincipleOfManagement;
 	}(_react2.default.Component);
 	
 	exports.default = PrincipleOfManagement;
@@ -33154,183 +33017,218 @@
 	    function MouvementLoss(props) {
 	        _classCallCheck(this, MouvementLoss);
 	
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(MouvementLoss).call(this, props));
-	
-	        _this.clickMe = _this.clickMe.bind(_this);
-	        return _this;
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(MouvementLoss).call(this, props));
 	    }
 	
 	    _createClass(MouvementLoss, [{
-	        key: 'clickMe',
-	        value: function clickMe() {
-	            alert("Hey man!");
-	        }
-	    }, {
 	        key: 'render',
 	        value: function render() {
+	
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'movementLoss row container' },
 	                _react2.default.createElement(
-	                    'h1',
-	                    null,
-	                    'Mouvement Loss'
-	                ),
-	                _react2.default.createElement(
-	                    'table',
-	                    null,
+	                    'div',
+	                    { className: 'movementLoss_firstCol col s12' },
 	                    _react2.default.createElement(
-	                        'tbody',
+	                        'div',
+	                        { className: 'row' },
+	                        _react2.default.createElement(
+	                            'h1',
+	                            null,
+	                            'Movement Loss'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'table',
 	                        null,
 	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement('th', null),
-	                            _react2.default.createElement(
-	                                'th',
-	                                null,
-	                                'Major'
-	                            ),
-	                            _react2.default.createElement(
-	                                'th',
-	                                null,
-	                                'Moderate'
-	                            ),
-	                            _react2.default.createElement(
-	                                'th',
-	                                null,
-	                                'Minimal'
-	                            ),
-	                            _react2.default.createElement(
-	                                'th',
-	                                null,
-	                                'Describe pain'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
+	                            'tbody',
 	                            null,
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                'Flexion'
+	                                _react2.default.createElement('th', null),
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    null,
+	                                    'Major'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    null,
+	                                    'Moderate'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    null,
+	                                    'Minimal'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    null,
+	                                    'No Loss'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'th',
+	                                    null,
+	                                    'Describe Pain'
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group1', type: 'radio', value: 'red', label: ' ' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Flexion'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'maj', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'mod', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'min', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'nil', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, null)
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group1', type: 'radio', value: 'yellow', label: ' ' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Extension'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'maj', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'mod', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'min', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'nil', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, null)
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group1', type: 'radio', value: 'green', label: ' ' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Side Gliding R'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'maj', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'mod', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'min', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'nil', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, null)
+	                                )
 	                            ),
 	                            _react2.default.createElement(
-	                                'td',
+	                                'tr',
 	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group1', type: 'text' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                'Extension'
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group2', type: 'radio', value: 'red1', label: ' ' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group2', type: 'radio', value: 'yellow1', label: ' ' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group2', type: 'radio', value: 'green1', label: ' ' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group2', type: 'text' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                'Side Gliding R'
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group3', type: 'radio', value: 'red3', label: ' ' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group3', type: 'radio', value: 'yellow3', label: ' ' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group3', type: 'radio', value: 'green3', label: ' ' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group3', type: 'text' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'tr',
-	                            null,
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                'Side Gliding L'
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group4', type: 'radio', value: 'red4', label: ' ' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group4', type: 'radio', value: 'yellow4', label: ' ' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group4', type: 'radio', value: 'green4', label: ' ' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'td',
-	                                null,
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'group4', type: 'text' })
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Side Gliding L'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'maj', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'mod', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'min', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'flexion', type: 'radio', value: 'nil', label: ' ' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    _react2.default.createElement(_reactMaterialize.Input, null)
+	                                )
 	                            )
 	                        )
 	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'video',
-	                    { id: 'background-video', loop: true, autoPlay: true },
-	                    _react2.default.createElement('source', { src: 'http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4', type: 'video/mp4' }),
-	                    _react2.default.createElement('source', { src: 'http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4', type: 'video/ogg' }),
-	                    'Your browser does not support the video tag.'
 	                )
 	            );
 	        }
@@ -34100,41 +33998,22 @@
 	    return MechanicalRes;
 	}(_react2.default.Component);
 	
-	//my first component created with react
-	
 	var TestMovements = function (_React$Component4) {
 	    _inherits(TestMovements, _React$Component4);
 	
 	    function TestMovements(props) {
 	        _classCallCheck(this, TestMovements);
 	
-	        var _this4 = _possibleConstructorReturn(this, Object.getPrototypeOf(TestMovements).call(this, props));
-	        //We access function on the object's parent using the super;
-	
-	
-	        _this4.showText = _this4.showText.bind(_this4);
-	        return _this4;
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(TestMovements).call(this, props));
 	    }
 	
 	    _createClass(TestMovements, [{
-	        key: 'showText',
-	        value: function showText() {
-	            alert('wassup');
-	        }
-	    }, {
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            $(document).ready(function () {
-	                $('select').material_select();
-	            });
-	        }
-	    }, {
 	        key: 'render',
 	        value: function render() {
 	
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'row' },
+	                { className: 'row container' },
 	                _react2.default.createElement(
 	                    'table',
 	                    { className: 'symptomsTable' },
@@ -37438,6 +37317,180 @@
 	var _index = __webpack_require__(309);
 	
 	var INITIAL_STATE = 0;
+
+/***/ },
+/* 358 */,
+/* 359 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactMaterialize = __webpack_require__(265);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var StaticOtherTests = function (_React$Component) {
+	    _inherits(StaticOtherTests, _React$Component);
+	
+	    function StaticOtherTests(props) {
+	        _classCallCheck(this, StaticOtherTests);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(StaticOtherTests).call(this, props));
+	    }
+	
+	    _createClass(StaticOtherTests, [{
+	        key: "render",
+	        value: function render() {
+	
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "staticOtherTests row container" },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "staticOtherTests__firstCol col s12" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(
+	                            "h1",
+	                            null,
+	                            "Static Tests"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Sitting Slouched" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Sitting Erect" })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Standing Slouched" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Standing Erect" })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Lying Prone in Extension" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Long Sitting" })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "input-field col s12" },
+	                            _react2.default.createElement("textarea", { id: "otherTests", className: "materialize-textarea" }),
+	                            _react2.default.createElement(
+	                                "label",
+	                                { "for": "otherTests" },
+	                                "Other Tests"
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return StaticOtherTests;
+	}(_react2.default.Component);
+	
+	exports.default = StaticOtherTests;
+
+/***/ },
+/* 360 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactMaterialize = __webpack_require__(265);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ProvisionalClassification = function (_React$Component) {
+	    _inherits(ProvisionalClassification, _React$Component);
+	
+	    function ProvisionalClassification(props) {
+	        _classCallCheck(this, ProvisionalClassification);
+	
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(ProvisionalClassification).call(this, props));
+	    }
+	
+	    _createClass(ProvisionalClassification, [{
+	        key: "render",
+	        value: function render() {
+	
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "provisionalClass row container" },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "provisionalClass__firstCol col s12" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(
+	                            "h1",
+	                            null,
+	                            "Provisional Classification"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: "provisionalClass", type: "checkbox", value: "derangement", label: "derangement" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: "provisionalClass", type: "checkbox", value: "dysfunction", label: "dysfunction" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: "provisionalClass", type: "checkbox", value: "posture", label: "posture" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: "provisionalClass", type: "checkbox", value: "other", label: "other" })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, label: "Derangement, Pain Location" })
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return ProvisionalClassification;
+	}(_react2.default.Component);
+	
+	exports.default = ProvisionalClassification;
 
 /***/ }
 /******/ ]);

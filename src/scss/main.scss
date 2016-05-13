@@ -13,11 +13,13 @@
  
 @import "test_movements";
 
-@import 'specific_questions.scss';
+@import "static_other_tests";
 
-//@import 'principle_of_management';
+@import "provisional_class";
 
-//@import "mouvement_loss";
+@import 'principle_of_management';
+
+@import "mouvement_loss";
 
 // body {
 //   font: $font-stack;
