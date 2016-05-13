@@ -1,11 +1,23 @@
-
-
-
-.specific_questions {
-
-  font-style: italic;
-  border: 1px solid #ccc;
-  background-color: black;
-  color: white;
+.specificQuestions {
   
+    h1 {
+      font-size: 2em;
+    }
+    
+    h2 {
+      font-size: 1.6em;
+      font-weight: 300;
+    }
+    
+    &__checkRow {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    &__bladderGait {
+        h2 {
+          margin-right: 1em;
+        }
+    }
+          
 }

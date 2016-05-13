@@ -1,5 +1,25 @@
-$mystyle: underline;
+.posture {
+    
+    &__firstCol.col {
+        padding: 0;
+    }
+      
+    h1 {
+      font-size: 2em;
+      margin-left: 0.75rem;
+    }
+    
+    
+    h2 {
+      font-size: 1.6em;
+      font-weight: 300;
+    }
+    
+    h3 {
+        font-size: 1.2em;
+        font-weight: 300;
+        text-align: right;
+    }
 
-.row {
-    padding-bottom: 10px;
+          
 }

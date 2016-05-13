@@ -1,88 +1,87 @@
-import React from 'react';
-import {
-    Input
-}
-from 'react-materialize';
+import React from "react";
+import {Input} from "react-materialize";
 
 
 class Posture extends React.Component {
 
+    constructor(props) {
+        
+        super(props);
+
+    }
+    
     render() {
         return (
-            <div>
-           
-            <div className='row'>
-            <div className='col s3'>
-            Sitting
-            </div>
-            <div className='col s3'>
-            Standing
-            </div>
-            <div className='col s3'>
-            Lordosis
-            </div>
-            <div className='col s3'>
-            Lateral Shift
-            </div>
-            </div>
             
-            <div className='row'>
-                        
-<div className='col s3'>
-    <Input name='sitting' type='radio' value='good' label='Good' className='with-gap' />
-    <Input name='sitting' type='radio' value='fair' label='Fair' className='with-gap' />
-    <Input name='sitting' type='radio' value='poor' label='Poor' className='with-gap' />
-</div>
+             <div className="posture row container">
+                <div className="posture__firstCol col s12">
+                    <div className="row">
+                        <h1>Posture</h1>
+                    </div>
+                    
+                    <div className="row valign-wrapper">
+                        <div className="col s6 m3 l2">
+                            <h2>Sitting</h2>
+                        </div>
+                        <div className="col s6 m3 l4">
+                            <Input name="sitting" type="radio" value="good" label="good" />
+                            <Input name="sitting" type="radio" value="fair" label="fair" />
+                            <Input name="sitting" type="radio" value="poor" label="poor" />                            
+                        </div>
+                        <div className="col s6 m3 l2 valign-wrapper">
+                            <h2>Standing</h2>
+                        </div>
+                        <div className="col s6 m3 l4">
+                            <Input name="standing" type="radio" value="good" label="good" />
+                            <Input name="standing" type="radio" value="fair" label="fair" />
+                            <Input name="standing" type="radio" value="poor" label="poor" />                            
+                        </div>                          
+                    </div>
 
-<div className='col s3'>
-    <Input name='standing' type='radio' value='good' label='Good' className='with-gap' />
-    <Input name='standing' type='radio' value='fair' label='Fair' className='with-gap' />
-    <Input name='standing' type='radio' value='poor' label='Poor' className='with-gap' />
-</div>
-
-<div className='col s3'>
-    <Input name='lordosis' type='radio' value='red' label='Red' className='with-gap' />
-    <Input name='lordosis' type='radio' value='acc' label='Acc' className='with-gap' />
-    <Input name='lordosis' type='radio' value='normal' label='Normal' className='with-gap' />
-</div>
-
-<div className='col s3'>
-    <Input name='lateralShift' type='radio' value='right' label='Right' className='with-gap' />
-    <Input name='lateralShift' type='radio' value='left' label='Left' className='with-gap' />
-    <Input name='lateralShift' type='radio' value='nil' label='Nil' className='with-gap' />
-</div>
-
-
-        <div className="row">
-          <form className="col s12"/>
-          <div className="row">
-          <div className="col s4">
-    <p class="fixme">Correction of Posture:</p><br/>
-    <Input name='posture' type='radio' value='better' label='Better' className='with-gap' />
-    <Input name='posture' type='radio' value='worse' label='Worse' className='with-gap' />
-    <Input name='posture' type='radio' value='noEffect' label='No Effect' className='with-gap' />
-        </div>
-        <div className="input-field col s4 z-depth-1">
-          <input id="noEffect" type="text" className="validate"/>
-          <label for="noEffect">Notes: No Effect</label>
-          </div>
-         <div className="col s4">
-             <Input name='posture' type='radio' value='relevant' label='Relevant'/>
-             <Input name='posture' type='radio' value='notRelevant' label='Not Relevant' />
-        </div>
-        </div>
-        
-        <div className="row">
-          <form className="col s12"/>
-          <div className="input-field col s12 z-depth-1">
-          <input id="otherObservations" type="text" className="validate"/>
-          <label for="otherObservations">Other observations</label>
-          </div>
-          </div>
-                        
+                    <div className="row valign-wrapper">
+                        <div className="col s6 m3 l2">
+                            <h2>Lordosis</h2>
+                        </div>
+                        <div className="col s6 m9 l10">
+                            <Input name="sitting" type="radio" value="reduced" label="reduced" />
+                            <Input name="sitting" type="radio" value="accentuated" label="accentuated" />
+                            <Input name="sitting" type="radio" value="normal" label="normal" />                                            
+                        </div>                        
+                    </div>
+                    
+                    <div className="row valign-wrapper">
+                        <div className="col s6 m3 l2">
+                            <h2>Correction of Posture</h2>
+                        </div>
+                        <div className="col s6 m3 l4">
+                            <Input name="correctionPosture" type="radio" value="better" label="better" />
+                            <Input name="correctionPosture" type="radio" value="worse" label="worse" />
+                            <Input name="correctionPosture" type="radio" value="no effect" label="no effect" /> 
+                        </div> 
+                        <Input s={12} m={6} l={6} />                                                 
+                    </div>
+                    
+                    <div className="row valign-wrapper">
+                        <div className="col s6 m9 l10">
+                            <h3>Relevant</h3>
+                        </div>
+                        <div className="col s6 m3 l3">
+                            <Input name="relevantPosture" type="radio" value="yes" label="yes" />
+                            <Input name="relevantPosture" type="radio" value="yes" label="no" />
+                        </div>
+                    </div>
+                    
+                    <div className="row">
+                        <div className="input-field col s12">
+                            <textarea id="observationsPosture" className="materialize-textarea"></textarea>
+                            <label for="observationsPosture">Other Observations</label>
+                        </div>
+                    </div>                    
+                                        
+                </div>
             </div>
-            </div>
-            </div>
+
+
         )
     }
 }

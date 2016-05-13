@@ -28141,13 +28141,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _principle_of_management = __webpack_require__(263);
+	var _reactRedux = __webpack_require__(169);
 	
-	var _principle_of_management2 = _interopRequireDefault(_principle_of_management);
+	var _index = __webpack_require__(309);
 	
 	var _redux = __webpack_require__(176);
 	
-	var _reactRedux = __webpack_require__(169);
+	var _principle_of_management = __webpack_require__(263);
+	
+	var _principle_of_management2 = _interopRequireDefault(_principle_of_management);
 	
 	var _client_info = __webpack_require__(264);
 	
@@ -28169,15 +28171,13 @@
 	
 	var _posture2 = _interopRequireDefault(_posture);
 	
-	var _index = __webpack_require__(309);
+	var _test_movements = __webpack_require__(311);
+	
+	var _test_movements2 = _interopRequireDefault(_test_movements);
 	
 	var _specific_questions = __webpack_require__(310);
 	
 	var _specific_questions2 = _interopRequireDefault(_specific_questions);
-	
-	var _test_movements = __webpack_require__(311);
-	
-	var _test_movements2 = _interopRequireDefault(_test_movements);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -28187,33 +28187,26 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // object
 	
-	
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 	
 	  function App(props) {
 	    _classCallCheck(this, App);
 	
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
 	    //We access function on the object's parent using the super;
 	
 	    // bind 'this' to my App
-	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
-	
-	    _this.onButtonClick = _this.onButtonClick.bind(_this);
-	
-	    return _this;
+	    //this.onButtonClick = this.onButtonClick.bind(this);
 	  }
 	
+	  // onButtonClick(){
+	  //   this.props.updateCount();
+	  // }
+	
+	  // React components MUST have a render methods and this MUST always return HTML. The 'html' below is actually jsx
+	
 	  _createClass(App, [{
-	    key: 'onButtonClick',
-	    value: function onButtonClick() {
-	      this.props.updateCount();
-	    }
-	
-	    // React components MUST have a render methods and this MUST always return HTML. The 'html' below is actually jsx
-	
-	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -28221,22 +28214,12 @@
 	        null,
 	        _react2.default.createElement(_client_info2.default, { prop: 'value' }),
 	        _react2.default.createElement(_history2.default, null),
-	        _react2.default.createElement(_test_movements2.default, null),
 	        _react2.default.createElement(_specific_questions2.default, null),
-	        _react2.default.createElement(_principle_of_management2.default, null),
-	        _react2.default.createElement(_mouvement_loss2.default, null),
-	        _react2.default.createElement(_neurological2.default, null),
 	        _react2.default.createElement(_posture2.default, null),
-	        _react2.default.createElement(
-	          'button',
-	          { onClick: this.onButtonClick },
-	          'Click me!'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          this.props.count
-	        )
+	        _react2.default.createElement(_neurological2.default, null),
+	        _react2.default.createElement(_test_movements2.default, null),
+	        _react2.default.createElement(_principle_of_management2.default, null),
+	        _react2.default.createElement(_mouvement_loss2.default, null)
 	      );
 	    }
 	  }]);
@@ -32994,7 +32977,7 @@
 	                        { className: 'history__radioRow row' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'history__radioRow__radioCol col s6 m3 l3' },
+	                            { className: 'history__radioRow__radioCol col s12 m3 l3' },
 	                            _react2.default.createElement(
 	                                'h3',
 	                                null,
@@ -33009,7 +32992,7 @@
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'history__radioRow__radioCol col m3 l3' },
+	                            { className: 'history__radioRow__radioCol col s12 m3 l3' },
 	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'disturbedSleep', type: 'radio', value: 'yes', label: 'yes' }),
 	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'disturbedSleep', type: 'radio', value: 'no', label: 'no' })
 	                        ),
@@ -33081,7 +33064,7 @@
 	                        { className: 'history__radioRow row' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'history__radioRow__prevEpisodes col s6 m3 l3' },
+	                            { className: 'history__radioRow__prevEpisodes col s12 m3 l3' },
 	                            _react2.default.createElement(
 	                                'h3',
 	                                null,
@@ -33102,7 +33085,7 @@
 	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '6_10', label: '6 to 10' }),
 	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '11plus', label: '11 +' })
 	                        ),
-	                        _react2.default.createElement(_reactMaterialize.Input, { m: 3, l: 3, name: 'yearFirstEpisode', label: 'Year of First Episode' })
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 3, l: 3, name: 'yearFirstEpisode', label: 'Year of First Episode' })
 	                    ),
 	                    _react2.default.createElement('div', { className: 'history__lastDivider divider' }),
 	                    _react2.default.createElement(
@@ -33388,48 +33371,35 @@
 	  function Neurological(props) {
 	    _classCallCheck(this, Neurological);
 	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Neurological).call(this, props));
-	
-	    _this.showText = _this.showText.bind(_this);
-	    _this.handleMotorDeficit = _this.handleMotorDeficit;
-	    _this.postResults = _this.postResults.bind(_this);
-	    return _this;
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Neurological).call(this, props));
 	  }
 	
 	  _createClass(Neurological, [{
-	    key: "showText",
-	    value: function showText() {
-	      alert("wassup");
-	    }
-	  }, {
-	    key: "handleMotorDeficit",
-	    value: function handleMotorDeficit(e) {
-	      this.setState({
-	        motorDeficit: e.target.value
-	      });
-	    }
-	  }, {
-	    key: "postResults",
-	    value: function postResults() {
-	      console.log("Motor deficit: " + this.state.motorDeficit);
-	    }
-	  }, {
 	    key: "render",
 	    value: function render() {
+	
 	      return _react2.default.createElement(
 	        "div",
-	        null,
+	        { className: "neurological row container" },
 	        _react2.default.createElement(
 	          "div",
-	          { className: "row" },
-	          _react2.default.createElement("form", { className: "col s12" }),
+	          { className: "neurological__firstCol col s12" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "row" },
+	            _react2.default.createElement(
+	              "h1",
+	              null,
+	              "Neurological"
+	            )
+	          ),
 	          _react2.default.createElement(
 	            "div",
 	            { className: "row" },
 	            _react2.default.createElement(
 	              "div",
-	              { className: "input-field col s6 z-depth-1" },
-	              _react2.default.createElement("input", { id: "motorDeficit", type: "text", className: "validate" }),
+	              { className: "input-field col s12 m6 l6" },
+	              _react2.default.createElement("textarea", { id: "motorDeficit", className: "materialize-textarea" }),
 	              _react2.default.createElement(
 	                "label",
 	                { "for": "motorDeficit" },
@@ -33438,8 +33408,8 @@
 	            ),
 	            _react2.default.createElement(
 	              "div",
-	              { className: "input-field col s6 z-depth-1" },
-	              _react2.default.createElement("input", { id: "reflexes", type: "text", className: "validate" }),
+	              { className: "input-field col s12 m6 l6" },
+	              _react2.default.createElement("textarea", { id: "reflexes", className: "materialize-textarea" }),
 	              _react2.default.createElement(
 	                "label",
 	                { "for": "reflexes" },
@@ -33450,39 +33420,24 @@
 	          _react2.default.createElement(
 	            "div",
 	            { className: "row" },
-	            _react2.default.createElement("form", { className: "col s12" }),
 	            _react2.default.createElement(
 	              "div",
-	              { className: "row" },
+	              { className: "input-field col s12 m6 l6" },
+	              _react2.default.createElement("textarea", { id: "sensoryDeficit", className: "materialize-textarea" }),
 	              _react2.default.createElement(
-	                "div",
-	                { className: "input-field col s6 z-depth-1" },
-	                _react2.default.createElement("input", { id: "sensoryDeficit", type: "text", className: "validate" }),
-	                _react2.default.createElement(
-	                  "label",
-	                  { "for": "sensoryDeficit" },
-	                  "Sensory Deficit"
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "div",
-	                { className: "input-field col s6 z-depth-1" },
-	                _react2.default.createElement("input", { id: "duralSigns", type: "text", className: "validate" }),
-	                _react2.default.createElement(
-	                  "label",
-	                  { "for": "duralSigns" },
-	                  "Dural Signs"
-	                )
+	                "label",
+	                { "for": "sensoryDeficit" },
+	                "Sensory Deficit"
 	              )
 	            ),
 	            _react2.default.createElement(
 	              "div",
-	              { className: "row" },
-	              _react2.default.createElement("form", { className: "col s12 offset-s6" }),
+	              { className: "input-field col s12 m6 l6" },
+	              _react2.default.createElement("textarea", { id: "duralSigns", className: "materialize-textarea" }),
 	              _react2.default.createElement(
-	                "button",
-	                { className: "btn waves-effect waves-light z-depth-2", type: "submit", name: "action" },
-	                "Submit"
+	                "label",
+	                { "for": "duralSigns" },
+	                "Dural Signs"
 	              )
 	            )
 	          )
@@ -33495,17 +33450,12 @@
 	}(_react2.default.Component);
 	
 	exports.default = Neurological;
-	
-	/*
-	1bundle.js:28337 Uncaught TypeError: Cannot read property 'setState' of undefinedReactErrorUtils.invokeGuardedCallback @ bundle.js:5775
-	bundle.js:28344 Uncaught TypeError: Cannot read property 'motorDeficit' of nullReactErrorUtils.invokeGuardedCallback @ bundle.js:5775
-	*/
 
 /***/ },
 /* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -33530,123 +33480,137 @@
 	var Posture = function (_React$Component) {
 	    _inherits(Posture, _React$Component);
 	
-	    function Posture() {
+	    function Posture(props) {
 	        _classCallCheck(this, Posture);
 	
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Posture).apply(this, arguments));
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Posture).call(this, props));
 	    }
 	
 	    _createClass(Posture, [{
-	        key: 'render',
+	        key: "render",
 	        value: function render() {
 	            return _react2.default.createElement(
-	                'div',
-	                null,
+	                "div",
+	                { className: "posture row container" },
 	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'row' },
+	                    "div",
+	                    { className: "posture__firstCol col s12" },
 	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'col s3' },
-	                        'Sitting'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'col s3' },
-	                        'Standing'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'col s3' },
-	                        'Lordosis'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'col s3' },
-	                        'Lateral Shift'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'row' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'col s3' },
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'sitting', type: 'radio', value: 'good', label: 'Good', className: 'with-gap' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'sitting', type: 'radio', value: 'fair', label: 'Fair', className: 'with-gap' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'sitting', type: 'radio', value: 'poor', label: 'Poor', className: 'with-gap' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'col s3' },
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'standing', type: 'radio', value: 'good', label: 'Good', className: 'with-gap' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'standing', type: 'radio', value: 'fair', label: 'Fair', className: 'with-gap' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'standing', type: 'radio', value: 'poor', label: 'Poor', className: 'with-gap' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'col s3' },
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lordosis', type: 'radio', value: 'red', label: 'Red', className: 'with-gap' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lordosis', type: 'radio', value: 'acc', label: 'Acc', className: 'with-gap' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lordosis', type: 'radio', value: 'normal', label: 'Normal', className: 'with-gap' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'col s3' },
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lateralShift', type: 'radio', value: 'right', label: 'Right', className: 'with-gap' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lateralShift', type: 'radio', value: 'left', label: 'Left', className: 'with-gap' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'lateralShift', type: 'radio', value: 'nil', label: 'Nil', className: 'with-gap' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'row' },
-	                        _react2.default.createElement('form', { className: 'col s12' }),
+	                        "div",
+	                        { className: "row" },
 	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'row' },
+	                            "h1",
+	                            null,
+	                            "Posture"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s6 m3 l2" },
 	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'col s4' },
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    { 'class': 'fixme' },
-	                                    'Correction of Posture:'
-	                                ),
-	                                _react2.default.createElement('br', null),
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'better', label: 'Better', className: 'with-gap' }),
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'worse', label: 'Worse', className: 'with-gap' }),
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'noEffect', label: 'No Effect', className: 'with-gap' })
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'input-field col s4 z-depth-1' },
-	                                _react2.default.createElement('input', { id: 'noEffect', type: 'text', className: 'validate' }),
-	                                _react2.default.createElement(
-	                                    'label',
-	                                    { 'for': 'noEffect' },
-	                                    'Notes: No Effect'
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'col s4' },
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'relevant', label: 'Relevant' }),
-	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'posture', type: 'radio', value: 'notRelevant', label: 'Not Relevant' })
+	                                "h2",
+	                                null,
+	                                "Sitting"
 	                            )
 	                        ),
 	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2.default.createElement('form', { className: 'col s12' }),
+	                            "div",
+	                            { className: "col s6 m3 l4" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "sitting", type: "radio", value: "good", label: "good" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "sitting", type: "radio", value: "fair", label: "fair" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "sitting", type: "radio", value: "poor", label: "poor" })
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s6 m3 l2 valign-wrapper" },
 	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'input-field col s12 z-depth-1' },
-	                                _react2.default.createElement('input', { id: 'otherObservations', type: 'text', className: 'validate' }),
-	                                _react2.default.createElement(
-	                                    'label',
-	                                    { 'for': 'otherObservations' },
-	                                    'Other observations'
-	                                )
+	                                "h2",
+	                                null,
+	                                "Standing"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s6 m3 l4" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "standing", type: "radio", value: "good", label: "good" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "standing", type: "radio", value: "fair", label: "fair" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "standing", type: "radio", value: "poor", label: "poor" })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s6 m3 l2" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "Lordosis"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s6 m9 l10" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "sitting", type: "radio", value: "reduced", label: "reduced" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "sitting", type: "radio", value: "accentuated", label: "accentuated" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "sitting", type: "radio", value: "normal", label: "normal" })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s6 m3 l2" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "Correction of Posture"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s6 m3 l4" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "correctionPosture", type: "radio", value: "better", label: "better" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "correctionPosture", type: "radio", value: "worse", label: "worse" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "correctionPosture", type: "radio", value: "no effect", label: "no effect" })
+	                        ),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6 })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s6 m9 l10" },
+	                            _react2.default.createElement(
+	                                "h3",
+	                                null,
+	                                "Relevant"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s6 m3 l3" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "relevantPosture", type: "radio", value: "yes", label: "yes" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "relevantPosture", type: "radio", value: "yes", label: "no" })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "input-field col s12" },
+	                            _react2.default.createElement("textarea", { id: "observationsPosture", className: "materialize-textarea" }),
+	                            _react2.default.createElement(
+	                                "label",
+	                                { "for": "observationsPosture" },
+	                                "Other Observations"
 	                            )
 	                        )
 	                    )
@@ -33694,6 +33658,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactMaterialize = __webpack_require__(265);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -33708,111 +33674,231 @@
 	    function SpecificQuestions(props) {
 	        _classCallCheck(this, SpecificQuestions);
 	
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SpecificQuestions).call(this, props));
-	        //We access function on the object's parent using the super;
-	
-	
-	        _this.popUp = _this.popUp.bind(_this);
-	        return _this;
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(SpecificQuestions).call(this, props));
 	    }
 	
 	    _createClass(SpecificQuestions, [{
-	        key: "popUp",
-	        value: function popUp() {
-	            alert("sadfsadfasdfwefewrfre");
-	        }
-	    }, {
 	        key: "render",
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
-	                { className: "specific_questions" },
+	                { className: "specificQuestions row container" },
 	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "Cough",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "conditions", value: "Cough" }),
-	                    "Sneeze",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "conditions", value: "Sneeze" }),
-	                    "Strain",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "conditions", value: "Strain" }),
-	                    "+ve",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "conditions", value: "plus_ve" }),
-	                    "-ve",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "conditions", value: "minus_ve" })
-	                ),
-	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "Bladder: normal",
-	                    _react2.default.createElement("input", { type: "radio", name: "Bladder", value: "bladder_normal" }),
-	                    "abnormal",
-	                    _react2.default.createElement("input", { type: "radio", name: "Bladder", value: "bladder_abnormal" })
-	                ),
-	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "Medications: Nil",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "Medications", value: "Nil" }),
-	                    "NSAIDS",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "Medications", value: "NSAIDS" }),
-	                    "Analg",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "Medications", value: "Analg" }),
-	                    "Steroids",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "Medications", value: "Steroids" }),
-	                    "Anticoag",
-	                    _react2.default.createElement("input", { type: "checkbox", name: "Medications", value: "Anticoag" }),
-	                    "Other",
-	                    _react2.default.createElement("input", { type: "text", name: "Medications" })
-	                ),
-	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "General Health: Good ",
-	                    _react2.default.createElement("input", { type: "radio", name: "General_health", value: "Good" }),
-	                    "Fair",
-	                    _react2.default.createElement("input", { type: "radio", name: "General_health", value: "Fair" }),
-	                    "Poor",
-	                    _react2.default.createElement("input", { type: "radio", name: "General_health", value: "Poor" }),
-	                    _react2.default.createElement("input", { type: "text", name: "General_health" })
-	                ),
-	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "Imaging: Yes",
-	                    _react2.default.createElement("input", { type: "radio", name: "Imaging", value: "yes" }),
-	                    "No",
-	                    _react2.default.createElement("input", { type: "radio", name: "Imaging", value: "no" }),
-	                    _react2.default.createElement("input", { type: "text", name: "Imaging" })
-	                ),
-	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "Recent or major surgery: Yes",
-	                    _react2.default.createElement("input", { type: "radio", name: "Maj_Surgery", value: "yes" }),
-	                    "No",
-	                    _react2.default.createElement("input", { type: "radio", name: "Maj_Surgery", value: "no" }),
-	                    _react2.default.createElement("input", { type: "text", name: "Maj_Surgery" })
-	                ),
-	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "Accidents: Yes",
-	                    _react2.default.createElement("input", { type: "radio", name: "Accidents", value: "yes" }),
-	                    "No",
-	                    _react2.default.createElement("input", { type: "radio", name: "Accidents", value: "no" }),
-	                    _react2.default.createElement("input", { type: "text", name: "Accidents" })
-	                ),
-	                _react2.default.createElement(
-	                    "p",
-	                    null,
-	                    "Other: ",
-	                    _react2.default.createElement("input", { type: "text", name: "Other" })
-	                ),
-	                _react2.default.createElement(
-	                    "button",
-	                    { onClick: this.popUp },
-	                    "here"
+	                    "div",
+	                    { className: "col s12" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(
+	                            "h1",
+	                            null,
+	                            "Specific Questions"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "specificQuestions__checkRow row valign-wrapper" },
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: "specificQuestions", type: "checkbox", value: "cough", label: "cough" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: "specificQuestions", type: "checkbox", value: "sneeze", label: "sneeze" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: "specificQuestions", type: "checkbox", value: "strain", label: "strain" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: "specificQuestions", type: "checkbox", value: "+ve", label: "+ve" }),
+	                        _react2.default.createElement(_reactMaterialize.Input, { name: "specificQuestions", type: "checkbox", value: "-ve", label: "-ve" })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "specificQuestions__bladderGait row" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "specificQuestions__bladderGait__bladder valign-wrapper col s12 m6 l6" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "Bladder"
+	                            ),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "bladder", type: "radio", value: "normal", label: "normal" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "bladder", type: "radio", value: "abnormal", label: "abnormal" })
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "specificQuestions__bladderGait__gait valign-wrapper col s12 m6 l6" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "Gait"
+	                            ),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "gait", type: "radio", value: "normal", label: "normal" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "gait", type: "radio", value: "abnormal", label: "abnormal" })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "input-field col s12 m6 l6" },
+	                            _react2.default.createElement(
+	                                "select",
+	                                { multiple: true },
+	                                _react2.default.createElement(
+	                                    "option",
+	                                    { value: "none" },
+	                                    "none"
+	                                ),
+	                                _react2.default.createElement(
+	                                    "option",
+	                                    { value: "NSAIDS" },
+	                                    "NSAIDS"
+	                                ),
+	                                _react2.default.createElement(
+	                                    "option",
+	                                    { value: "analgesics" },
+	                                    "analgesics"
+	                                ),
+	                                _react2.default.createElement(
+	                                    "option",
+	                                    { value: "steroids" },
+	                                    "steroids"
+	                                ),
+	                                _react2.default.createElement(
+	                                    "option",
+	                                    { value: "anticoagulants" },
+	                                    "anticoagulants"
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                "label",
+	                                null,
+	                                "Medications"
+	                            )
+	                        ),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 6, label: "Other Medications, if applicable" })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l2" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "General Health"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m4 l4" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "genHealth", type: "radio", value: "good", label: "good" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "genHealth", type: "radio", value: "fair", label: "fair" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "genHealth", type: "radio", value: "poor", label: "poor" })
+	                        ),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 5, l: 6 })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l2" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "Imaging"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l3" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "imaging", type: "radio", value: "yes", label: "yes" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "imaging", type: "radio", value: "no", label: "no" })
+	                        ),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 7 })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l2" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "Recent or Major Surgery"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l3" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "surgery", type: "radio", value: "yes", label: "yes" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "surgery", type: "radio", value: "no", label: "no" })
+	                        ),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 7 })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l2" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "Night Pain"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l3" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "nightPain", type: "radio", value: "yes", label: "yes" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "nightPain", type: "radio", value: "no", label: "no" })
+	                        ),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 7 })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l2" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "Accidents"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l3" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "nightPain", type: "radio", value: "yes", label: "yes" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "nightPain", type: "radio", value: "no", label: "no" })
+	                        ),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 7 })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l2" },
+	                            _react2.default.createElement(
+	                                "h2",
+	                                null,
+	                                "Unexplained Weight Loss"
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "col s12 m3 l3" },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "nightPain", type: "radio", value: "yes", label: "yes" }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: "nightPain", type: "radio", value: "no", label: "no" })
+	                        ),
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, m: 6, l: 7 })
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "row valign-wrapper" },
+	                        _react2.default.createElement(_reactMaterialize.Input, { s: 12, label: "Any Additional Information" })
+	                    )
 	                )
 	            );
 	        }

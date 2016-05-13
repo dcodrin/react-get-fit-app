@@ -140,8 +140,8 @@ class History extends React.Component {
                     <div className="divider"></div>
                     
                     <div className="history__radioRow row">
-                        <div className="history__radioRow__radioCol col s6 m3 l3"><h3><span className="firstWord">Disturbed</span><br />sleep</h3></div>
-                        <div className="history__radioRow__radioCol col m3 l3">
+                        <div className="history__radioRow__radioCol col s12 m3 l3"><h3><span className="firstWord">Disturbed</span><br />sleep</h3></div>
+                        <div className="history__radioRow__radioCol col s12 m3 l3">
                         <Input name="disturbedSleep" type="radio" value="yes" label="yes" />
                         <Input name="disturbedSleep" type="radio" value="no" label="no" />
                         </div>
@@ -167,14 +167,14 @@ class History extends React.Component {
                     <div className="divider"></div>
                     
                     <div className="history__radioRow row">
-                        <div className="history__radioRow__prevEpisodes col s6 m3 l3"><h3><span className="firstWord">Previous</span><br />episodes</h3></div>
+                        <div className="history__radioRow__prevEpisodes col s12 m3 l3"><h3><span className="firstWord">Previous</span><br />episodes</h3></div>
                         <div className="history__radioRow__radioCol col s12 m5 l5">
                             <Input name="amoutEpisodes" type="radio" value="0" label="0" />
                             <Input name="amoutEpisodes" type="radio" value="1_5" label="1 to 5" />
                             <Input name="amoutEpisodes" type="radio" value="6_10" label="6 to 10" />
                             <Input name="amoutEpisodes" type="radio" value="11plus" label="11 +" />
                         </div>
-                        <Input m={3} l={3} name="yearFirstEpisode" label="Year of First Episode" />
+                        <Input s={12} m={3} l={3} name="yearFirstEpisode" label="Year of First Episode" />
                     </div>
 
                     <div className="history__lastDivider divider"></div>

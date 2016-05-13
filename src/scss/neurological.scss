@@ -1,9 +1,12 @@
-$mycolor: blue;
-
-.headline {
-  color: $mycolor;
-}
-
-.row {
-    text-align: center;
+.neurological {
+  
+	&__firstCol.col {
+		padding: 0;
+	}
+      
+	h1 {
+		font-size: 2em;
+		margin-left: 0.75rem;
+    }
+    
 }

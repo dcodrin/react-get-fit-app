@@ -1,20 +1,16 @@
 import React from 'react';
-import PrincipleOfManagement from './principle_of_management.js';
-import {bindActionCreators} from 'redux';  // object
 import {connect} from 'react-redux';
+import {updateCount} from '../actions/index';
+import {bindActionCreators} from 'redux';  // object
+
+import PrincipleOfManagement from './principle_of_management.js';
 import ClientInfo from "./client_info.js";
 import History from "./history.js";
 import MouvementLoss from './mouvement_loss.js';
-
 import Neurological from './neurological.js';
 import Posture from './posture.js';
-
-import {updateCount} from '../actions/index';
-import SpecificQuestions from './specific_questions.js';
-
-
-
 import TestMovements from './test_movements.js';
+import SpecificQuestions from './specific_questions.js';
 
 
 class App extends React.Component {
@@ -28,13 +24,13 @@ class App extends React.Component {
 
 
     // bind 'this' to my App
-    this.onButtonClick = this.onButtonClick.bind(this);
+    //this.onButtonClick = this.onButtonClick.bind(this);
 
   }
 
-  onButtonClick(){
-    this.props.updateCount();
-  }
+  // onButtonClick(){
+  //   this.props.updateCount();
+  // }
 
 
 
@@ -45,17 +41,12 @@ class App extends React.Component {
       <div>
           <ClientInfo prop="value" />
           <History />
-          <TestMovements />
           <SpecificQuestions/>
+          <Posture/>
+          <Neurological/>
+          <TestMovements />
           <PrincipleOfManagement/>
           <MouvementLoss/>
-          <Neurological/>
-          <Posture/>
-
-          <button onClick={this.onButtonClick}>Click me!</button>
-          <div>
-            {this.props.count}
-          </div>
       </div>
     );
   }

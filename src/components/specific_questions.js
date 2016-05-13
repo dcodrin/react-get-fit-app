@@ -1,68 +1,117 @@
-import React from 'react';
+import React from "react";
+import {Input, Icon} from 'react-materialize';
 
 class SpecificQuestions extends React.Component {
 
     constructor(props) {
-        //We access function on the object's parent using the super;
+
         super(props);
 
-        this.popUp = this.popUp.bind(this);
     }
 
-    popUp() {
-        alert("sadfsadfasdfwefewrfre");
-    }
+
     render() {
         return (
-            <div className="specific_questions">
-                <p>
-                    Cough<input type="checkbox" name="conditions" value="Cough"/>
-                    Sneeze<input type="checkbox" name="conditions" value="Sneeze"/>
-                    Strain<input type="checkbox" name="conditions" value="Strain"/>
-                    +ve<input type="checkbox" name="conditions" value="plus_ve"/>
-                    -ve<input type="checkbox" name="conditions" value="minus_ve"/>
-                </p>
-                <p>
-                    Bladder: normal<input type="radio" name="Bladder" value="bladder_normal"/>
-                    abnormal<input type="radio" name="Bladder" value="bladder_abnormal"/>
-                    </p>
-                    <p>
-                    Medications: Nil<input type="checkbox" name="Medications" value="Nil"/>
-                    NSAIDS<input type="checkbox" name="Medications" value="NSAIDS"/>
-                    Analg<input type="checkbox" name="Medications" value="Analg"/>
-                    Steroids<input type="checkbox" name="Medications" value="Steroids"/>
-                    Anticoag<input type="checkbox" name="Medications" value="Anticoag"/>
-                    Other<input type="text" name="Medications"/>
-                </p>
-                <p>
-                    General Health:
-                    Good <input type="radio" name="General_health" value="Good"/>
-                    Fair<input type="radio" name="General_health" value="Fair"/>
-                    Poor<input type="radio" name="General_health" value="Poor"/>
-                    <input type="text" name="General_health"/>
-                </p>
-                <p>
-                    Imaging: Yes<input type="radio" name="Imaging" value="yes"/>
-                    No<input type="radio" name="Imaging" value="no"/>
-                    <input type="text" name="Imaging"/>
-                </p>
-                <p>
-                    Recent or major surgery: Yes<input type="radio" name="Maj_Surgery" value="yes"/>
-                    No<input type="radio" name="Maj_Surgery" value="no"/>
-                    <input type="text" name="Maj_Surgery"/>
-                </p>
-                <p>
-                    Accidents: Yes<input type="radio" name="Accidents" value="yes"/>
-                    No<input type="radio" name="Accidents" value="no"/>
-                    <input type="text" name="Accidents"/>
-                </p>
-                <p>
-                    Other: <input type="text" name="Other"/>
-                </p>
-                <button onClick={this.popUp}>
-                here
-                </button>
-        
+            <div className="specificQuestions row container">
+                <div className="col s12">
+                    <div className="row">
+                        <h1>Specific Questions</h1>
+                    </div>
+                    
+                    <div className="specificQuestions__checkRow row valign-wrapper">
+                        <Input name="specificQuestions" type="checkbox" value="cough" label="cough" />
+                        <Input name="specificQuestions" type="checkbox" value="sneeze" label="sneeze" />
+                        <Input name="specificQuestions" type="checkbox" value="strain" label="strain" />
+                        <Input name="specificQuestions" type="checkbox" value="+ve" label="+ve" />
+                        <Input name="specificQuestions" type="checkbox" value="-ve" label="-ve" />
+                    </div>
+                    
+                    <div className="specificQuestions__bladderGait row">
+                        <div className="specificQuestions__bladderGait__bladder valign-wrapper col s12 m6 l6">
+                            <h2>Bladder</h2>
+                            <Input name="bladder" type="radio" value="normal" label="normal" />
+                            <Input name="bladder" type="radio" value="abnormal" label="abnormal" />
+                        </div>
+                        <div className="specificQuestions__bladderGait__gait valign-wrapper col s12 m6 l6">
+                            <h2>Gait</h2>
+                            <Input name="gait" type="radio" value="normal" label="normal" />
+                            <Input name="gait" type="radio" value="abnormal" label="abnormal" />
+                        </div>
+                    </div>
+                    
+                    <div className="row">
+                        <div className="input-field col s12 m6 l6">
+                            <select multiple>
+                                <option value="none">none</option>
+                                <option value="NSAIDS">NSAIDS</option>
+                                <option value="analgesics">analgesics</option>
+                                <option value="steroids">steroids</option>
+                                <option value="anticoagulants">anticoagulants</option>
+                            </select>
+                            <label>Medications</label>
+                        </div>
+                        <Input s={12} m={6} l={6} label="Other Medications, if applicable" />
+                    </div>
+                    
+                    <div className="row valign-wrapper">
+                        <div className="col s12 m3 l2"><h2>General Health</h2></div>
+                        <div className="col s12 m4 l4">
+                        <Input name="genHealth" type="radio" value="good" label="good" />
+                        <Input name="genHealth" type="radio" value="fair" label="fair" />
+                        <Input name="genHealth" type="radio" value="poor" label="poor" />
+                        </div>
+                        <Input s={12} m={5} l={6}/>
+                    </div>
+                    
+                    <div className="row valign-wrapper">
+                        <div className="col s12 m3 l2"><h2>Imaging</h2></div>
+                        <div className="col s12 m3 l3">
+                        <Input name="imaging" type="radio" value="yes" label="yes" />
+                        <Input name="imaging" type="radio" value="no" label="no" />
+                        </div>
+                        <Input s={12} m={6} l={7}  />
+                    </div>
+                        
+                    <div className="row valign-wrapper">
+                        <div className="col s12 m3 l2"><h2>Recent or Major Surgery</h2></div>
+                        <div className="col s12 m3 l3">
+                        <Input name="surgery" type="radio" value="yes" label="yes" />
+                        <Input name="surgery" type="radio" value="no" label="no" />
+                        </div>
+                        <Input s={12} m={6} l={7} />
+                    </div>
+                    
+                    <div className="row valign-wrapper">
+                        <div className="col s12 m3 l2"><h2>Night Pain</h2></div>
+                        <div className="col s12 m3 l3">
+                        <Input name="nightPain" type="radio" value="yes" label="yes" />
+                        <Input name="nightPain" type="radio" value="no" label="no" />
+                        </div>
+                        <Input s={12} m={6} l={7}  />
+                    </div>
+                    
+                    <div className="row valign-wrapper">
+                        <div className="col s12 m3 l2"><h2>Accidents</h2></div>
+                        <div className="col s12 m3 l3">
+                        <Input name="nightPain" type="radio" value="yes" label="yes" />
+                        <Input name="nightPain" type="radio" value="no" label="no" />
+                        </div>
+                        <Input s={12} m={6} l={7}  />
+                    </div>
+
+                    <div className="row valign-wrapper">
+                        <div className="col s12 m3 l2"><h2>Unexplained Weight Loss</h2></div>
+                        <div className="col s12 m3 l3">
+                        <Input name="nightPain" type="radio" value="yes" label="yes" />
+                        <Input name="nightPain" type="radio" value="no" label="no" />
+                        </div>
+                        <Input s={12} m={6} l={7} />
+                    </div>
+                    
+                    <div className="row valign-wrapper">        
+                        <Input s={12} label="Any Additional Information" />            
+                   </div>
+            </div>
         </div>
 
 

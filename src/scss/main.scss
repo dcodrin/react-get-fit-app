@@ -5,12 +5,15 @@
 
 @import "history";
 
-//@import "neurological";
-//@import "posture";
+@import "specific_questions";
+
+@import "posture";
+
+@import "neurological";
  
 @import "test_movements";
 
-//@import 'specific_questions.scss';
+@import 'specific_questions.scss';
 
 //@import 'principle_of_management';
 
