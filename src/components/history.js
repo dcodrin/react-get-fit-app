@@ -16,11 +16,10 @@ class History extends React.Component {
     });
   }
     
-        
     render() {
         return (
-            <div className="history container row">
-                <div className="col s12">
+            <div className="history row container">
+                <div className="history__firstCol col s12">
                 
                     <div className="row">
                         <h1>History</h1>
@@ -83,9 +82,11 @@ class History extends React.Component {
                         </div>                                          
                     </div>
                     
+                    <div className="history__firstDivider divider"></div>
+                    
                     <div className="history__betterWorse row">
-                        <div className="col s12 m2 l2"><h2>Worse</h2></div>
-                        <div className="col s12 m10 l10">
+                        <div className="col s12 m3 l3"><h2><span className="firstWord">Symptoms</span><br />worse</h2></div>
+                        <div className="col s12 m9 l9">
                             <div className="history__betterWorse__checkRow row">
                                 <Input name="symptomWorsePos" type="checkbox" value="bending" label="bending" />
                                 <Input name="symptomWorsePos" type="checkbox" value="sittingRising" label="sitting/rising" />
@@ -94,25 +95,25 @@ class History extends React.Component {
                                 <Input name="symptomWorsePos" type="checkbox" value="lying" label="lying" />
                             </div>
                             <div className="history__betterWorse__radioRow row">
-                                <div className="timeWorse">
                                     <Input name="timeWorse" type="radio" value="am" label="am" />
                                     <Input name="timeWorse" type="radio" value="progresses" label="as the day progresses" />
                                     <Input name="timeWorse" type="radio" value="pm" label="pm" />
-                                </div>
-                                <div className="history__betterWorse__radioRow__actionWorse">
+                           </div>
+                           <div className="row">
                                     <Input name="actionWorse" type="radio" value="still" label="when still" />
-                                    <Input name="actionWorse" type="radio" value="onMove" label="when on the move" />
-                                </div>                             
-                            </div>
+                                    <Input name="actionWorse" type="radio" value="onMove" label="when on the move" />                            
+                           </div>
                             <div className="row">
                                 <Input s={12} m={10} l={10} name="otherWorse" label="other" />
                             </div>
                         </div>
                     </div>
                     
+                    <div className="divider"></div>
+                    
                     <div className="history__betterWorse row">
-                        <div className="col s12 m2 l2"><h2>Better</h2></div>
-                        <div className="col s12 m10 l10">
+                        <div className="col s12 m3 l3"><h2><span className="firstWord">Symptoms</span><br />better</h2></div>
+                        <div className="col s12 m9 l9">
                             <div className="row">
                                 <Input name="symptomBetterPos" type="checkbox" value="bending" label="bending" />
                                 <Input name="symptomBetterPos" type="checkbox" value="sittingRising" label="sitting/rising" />
@@ -121,17 +122,14 @@ class History extends React.Component {
                                 <Input name="symptomBetterPos" type="checkbox" value="lying" label="lying" />
                             </div>
                             <div className="row">
-                                <div className="timeBetter">
                                     <Input name="timeBetter" type="radio" value="am" label="am" />
                                     <Input name="timeBetter" type="radio" value="progresses" label="as the day progresses" />
                                     <Input name="timeBetter" type="radio" value="pm" label="pm" />
-                                </div>
                             </div>
                             <div className="row">
-                                <div className="actionBetter">
                                     <Input name="actionBetter" type="radio" value="still" label="when still" />
                                     <Input name="actionBetter" type="radio" value="onMove" label="when on the move" />
-                                </div>                             
+                           
                             </div>
                             <div className="row">
                                 <Input s={12} m={10} l={10} name="otherBetter" label="other" />
@@ -139,11 +137,15 @@ class History extends React.Component {
                         </div>
                     </div>
                     
-                    <div className="row">
-                        <div className="col s6 m2 l2"><h6>Disturbed Sleep</h6></div>
-                        <Input s={3} m={1} l={1} name="disturbedSleep" type="radio" value="yes" label="yes" />
-                        <Input s={3} m={1} l={1} name="disturbedSleep" type="radio" value="no" label="no" />
-                        <div className="input-field col s6 m4 l4">
+                    <div className="divider"></div>
+                    
+                    <div className="history__radioRow row">
+                        <div className="history__radioRow__radioCol col s6 m3 l3"><h3><span className="firstWord">Disturbed</span><br />sleep</h3></div>
+                        <div className="history__radioRow__radioCol col m3 l3">
+                        <Input name="disturbedSleep" type="radio" value="yes" label="yes" />
+                        <Input name="disturbedSleep" type="radio" value="no" label="no" />
+                        </div>
+                        <div className="input-field col s6 m3 l3">
                             <select multiple>
                                 <option value="prone">prone</option>
                                 <option value="sup">sup</option>
@@ -152,7 +154,7 @@ class History extends React.Component {
                             </select>
                             <label>Sleeping Postures</label>
                         </div>
-                        <div className="input-field col s6 m4 l4">
+                        <div className="input-field col s6 m3 l3">
                             <select>
                                 <option value="firm">firm</option>
                                 <option value="soft">soft</option>
@@ -162,15 +164,21 @@ class History extends React.Component {
                         </div>  
                     </div>
                     
-                    <div className="row">
-                        <div className="col s6 m2 l2"><h6>Previous Episodes</h6></div>
-                        <Input name="amoutEpisodes" type="radio" value="0" label="0" />
-                        <Input name="amoutEpisodes" type="radio" value="1_5" label="1 to 5" />
-                        <Input name="amoutEpisodes" type="radio" value="6_10" label="6 to 10" />
-                        <Input name="amoutEpisodes" type="radio" value="11plus" label="11 +" />
+                    <div className="divider"></div>
+                    
+                    <div className="history__radioRow row">
+                        <div className="history__radioRow__prevEpisodes col s6 m3 l3"><h3><span className="firstWord">Previous</span><br />episodes</h3></div>
+                        <div className="history__radioRow__radioCol col s12 m5 l5">
+                            <Input name="amoutEpisodes" type="radio" value="0" label="0" />
+                            <Input name="amoutEpisodes" type="radio" value="1_5" label="1 to 5" />
+                            <Input name="amoutEpisodes" type="radio" value="6_10" label="6 to 10" />
+                            <Input name="amoutEpisodes" type="radio" value="11plus" label="11 +" />
+                        </div>
                         <Input m={3} l={3} name="yearFirstEpisode" label="Year of First Episode" />
                     </div>
-                    
+
+                    <div className="history__lastDivider divider"></div>
+
                     <div className="row">
                         <div className="input-field col s12 m6 l6">
                             <textarea id="previousHistory" className="materialize-textarea"></textarea>

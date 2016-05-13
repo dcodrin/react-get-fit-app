@@ -1,16 +1,38 @@
 .history{
     
+    &__firstCol.col {
+        padding: 0;
+    }
+    
     h1{
-        font-size: 2em;
+        font-size: 2rem;
+        padding-left: 0.75rem;
     }
     
     h2 {
-        font-size: 2em;
+        font-size: 1.8em;
         font-weight: lighter;
         text-align: right;
-        padding: 0.5em 1em 0 0;
+        padding: 1.4em 1em 0 0;
+        
     }
     
+    h3 {
+        font-size: 1.8rem;
+        font-weight: lighter;
+        text-align: right;
+        padding-right: 1.4rem;
+        margin-top: -1.6rem;
+    }
+    
+    .firstWord {
+        font-weight: 400;    
+    }
+    
+    &__radioRow__prevEpisodes h3 {
+        margin-top: 0.6rem;
+        margin-bottom: 1.6rem;
+    }
     
     &__radioRow__radioCol {
         margin-top: 2em;
@@ -32,23 +54,16 @@
         text-align: center;
         margin-top: 0.6em;
    }
-   
-   &__betterWorse__checkRow {
-       display: flex;
-       justify-content: space-between;
-       flex-wrap: wrap;
-       padding-right: 0.8em;
-   }
-   
-   &__betterWorse__radioRow {
-       display: flex;
-       justify-content: space-between;
-       flex-wrap: wrap;
-       
-       &__actionWorse {
-           display: flex;
-           justify-content: flex-end;
-       }
-   }
+
+    .divider {
+        margin-bottom: 3.4rem;    
+    }
     
+    &__firstDivider.divider {
+        margin-top: 2.4rem;
+    }
+    
+    &__lastDivider.divider{
+        margin-bottom: 2.4rem;
+    }
 }    

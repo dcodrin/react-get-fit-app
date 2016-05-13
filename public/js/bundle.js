@@ -32778,10 +32778,10 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'history container row' },
+	                { className: 'history row container' },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'col s12' },
+	                    { className: 'history__firstCol col s12' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'row' },
@@ -32886,21 +32886,28 @@
 	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'symptomLoc3', type: 'radio', value: 'leg', label: 'leg' })
 	                        )
 	                    ),
+	                    _react2.default.createElement('div', { className: 'history__firstDivider divider' }),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'history__betterWorse row' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'col s12 m2 l2' },
+	                            { className: 'col s12 m3 l3' },
 	                            _react2.default.createElement(
 	                                'h2',
 	                                null,
-	                                'Worse'
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { className: 'firstWord' },
+	                                    'Symptoms'
+	                                ),
+	                                _react2.default.createElement('br', null),
+	                                'worse'
 	                            )
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'col s12 m10 l10' },
+	                            { className: 'col s12 m9 l9' },
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'history__betterWorse__checkRow row' },
@@ -32913,19 +32920,15 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'history__betterWorse__radioRow row' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'timeWorse' },
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'timeWorse', type: 'radio', value: 'am', label: 'am' }),
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'timeWorse', type: 'radio', value: 'progresses', label: 'as the day progresses' }),
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'timeWorse', type: 'radio', value: 'pm', label: 'pm' })
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'history__betterWorse__radioRow__actionWorse' },
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'actionWorse', type: 'radio', value: 'still', label: 'when still' }),
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'actionWorse', type: 'radio', value: 'onMove', label: 'when on the move' })
-	                                )
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'timeWorse', type: 'radio', value: 'am', label: 'am' }),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'timeWorse', type: 'radio', value: 'progresses', label: 'as the day progresses' }),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'timeWorse', type: 'radio', value: 'pm', label: 'pm' })
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'row' },
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'actionWorse', type: 'radio', value: 'still', label: 'when still' }),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'actionWorse', type: 'radio', value: 'onMove', label: 'when on the move' })
 	                            ),
 	                            _react2.default.createElement(
 	                                'div',
@@ -32934,21 +32937,28 @@
 	                            )
 	                        )
 	                    ),
+	                    _react2.default.createElement('div', { className: 'divider' }),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'history__betterWorse row' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'col s12 m2 l2' },
+	                            { className: 'col s12 m3 l3' },
 	                            _react2.default.createElement(
 	                                'h2',
 	                                null,
-	                                'Better'
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { className: 'firstWord' },
+	                                    'Symptoms'
+	                                ),
+	                                _react2.default.createElement('br', null),
+	                                'better'
 	                            )
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'col s12 m10 l10' },
+	                            { className: 'col s12 m9 l9' },
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'row' },
@@ -32961,23 +32971,15 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'row' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'timeBetter' },
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'timeBetter', type: 'radio', value: 'am', label: 'am' }),
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'timeBetter', type: 'radio', value: 'progresses', label: 'as the day progresses' }),
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'timeBetter', type: 'radio', value: 'pm', label: 'pm' })
-	                                )
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'timeBetter', type: 'radio', value: 'am', label: 'am' }),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'timeBetter', type: 'radio', value: 'progresses', label: 'as the day progresses' }),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'timeBetter', type: 'radio', value: 'pm', label: 'pm' })
 	                            ),
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'row' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'actionBetter' },
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'actionBetter', type: 'radio', value: 'still', label: 'when still' }),
-	                                    _react2.default.createElement(_reactMaterialize.Input, { name: 'actionBetter', type: 'radio', value: 'onMove', label: 'when on the move' })
-	                                )
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'actionBetter', type: 'radio', value: 'still', label: 'when still' }),
+	                                _react2.default.createElement(_reactMaterialize.Input, { name: 'actionBetter', type: 'radio', value: 'onMove', label: 'when on the move' })
 	                            ),
 	                            _react2.default.createElement(
 	                                'div',
@@ -32986,23 +32988,34 @@
 	                            )
 	                        )
 	                    ),
+	                    _react2.default.createElement('div', { className: 'divider' }),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'row' },
+	                        { className: 'history__radioRow row' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'col s6 m2 l2' },
+	                            { className: 'history__radioRow__radioCol col s6 m3 l3' },
 	                            _react2.default.createElement(
-	                                'h6',
+	                                'h3',
 	                                null,
-	                                'Disturbed Sleep'
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { className: 'firstWord' },
+	                                    'Disturbed'
+	                                ),
+	                                _react2.default.createElement('br', null),
+	                                'sleep'
 	                            )
 	                        ),
-	                        _react2.default.createElement(_reactMaterialize.Input, { s: 3, m: 1, l: 1, name: 'disturbedSleep', type: 'radio', value: 'yes', label: 'yes' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { s: 3, m: 1, l: 1, name: 'disturbedSleep', type: 'radio', value: 'no', label: 'no' }),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'input-field col s6 m4 l4' },
+	                            { className: 'history__radioRow__radioCol col m3 l3' },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'disturbedSleep', type: 'radio', value: 'yes', label: 'yes' }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'disturbedSleep', type: 'radio', value: 'no', label: 'no' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'input-field col s6 m3 l3' },
 	                            _react2.default.createElement(
 	                                'select',
 	                                { multiple: true },
@@ -33035,7 +33048,7 @@
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'input-field col s6 m4 l4' },
+	                            { className: 'input-field col s6 m3 l3' },
 	                            _react2.default.createElement(
 	                                'select',
 	                                null,
@@ -33062,24 +33075,36 @@
 	                            )
 	                        )
 	                    ),
+	                    _react2.default.createElement('div', { className: 'divider' }),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'row' },
+	                        { className: 'history__radioRow row' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'col s6 m2 l2' },
+	                            { className: 'history__radioRow__prevEpisodes col s6 m3 l3' },
 	                            _react2.default.createElement(
-	                                'h6',
+	                                'h3',
 	                                null,
-	                                'Previous Episodes'
+	                                _react2.default.createElement(
+	                                    'span',
+	                                    { className: 'firstWord' },
+	                                    'Previous'
+	                                ),
+	                                _react2.default.createElement('br', null),
+	                                'episodes'
 	                            )
 	                        ),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '0', label: '0' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '1_5', label: '1 to 5' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '6_10', label: '6 to 10' }),
-	                        _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '11plus', label: '11 +' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'history__radioRow__radioCol col s12 m5 l5' },
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '0', label: '0' }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '1_5', label: '1 to 5' }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '6_10', label: '6 to 10' }),
+	                            _react2.default.createElement(_reactMaterialize.Input, { name: 'amoutEpisodes', type: 'radio', value: '11plus', label: '11 +' })
+	                        ),
 	                        _react2.default.createElement(_reactMaterialize.Input, { m: 3, l: 3, name: 'yearFirstEpisode', label: 'Year of First Episode' })
 	                    ),
+	                    _react2.default.createElement('div', { className: 'history__lastDivider divider' }),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'row' },
