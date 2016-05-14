@@ -1,0 +1,78 @@
+$main-color: #ff7043;
+$text-color: #333;
+
+.geosuggest {
+  font-size: 18px;
+  font-size: 1em;
+  position: relative;
+  width: 50%;
+  text-align: left;
+
+  &__input {
+    width: 100%;
+    border: none;
+    border-color: transparent;
+    background: transparent;
+    color: $text-color;
+    padding: .5em 1em;
+    -webkit-transition: border 0.2s, box-shadow 0.2s;
+    transition: border 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none;
+
+    &:focus {
+      border-color: $main-color;
+      box-shadow: 0 0 0 transparent;
+      outline: none;
+    }
+
+  }
+
+  &__suggests {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 25em;
+    padding: 0;
+    margin-top: -1px;
+    background: #fff;
+    box-shadow: 1px 2px 4px #222;
+    border-top-width: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    z-index: 5;
+    -webkit-transition: max-height 0.2s, border 0.2s;
+    transition: max-height 0.2s, border 0.2s;
+
+    &--hidden {
+      max-height: 0;
+      overflow: hidden;
+      border-width: 0;
+    }
+
+  }
+
+  &-item {
+    font-size: 18px;
+    font-size: 1em;
+    padding: .5em .65em;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background: $main-color;
+    }
+
+  }
+
+  &--active {
+    background: $main-color;
+    color: $text-color;
+
+    &:hover, &:focus {
+      background: $main-color;
+    }
+  }
+
+}
+
