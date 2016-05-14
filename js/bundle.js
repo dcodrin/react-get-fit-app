@@ -28119,7 +28119,7 @@
 	
 	exports.default = _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: '/public', component: _App2.default },
+	    { path: '/react-get-fit-app', component: _App2.default },
 	    '/* All routes should be nested here */'
 	);
 	
