@@ -7,7 +7,6 @@ class ClientInfo extends React.Component {
     constructor(props) {
         //We access functions/methods on the object's parent using the super;
         super(props);
-
         this.state = {suggest: ''};
 
         this.onSuggestSelect = this.onSuggestSelect.bind(this);

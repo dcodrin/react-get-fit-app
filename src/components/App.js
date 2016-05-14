@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {updateCount} from '../actions/index';
 import {bindActionCreators} from 'redux';  // object
 
+import SideNav from "./side_nav.js"
 import ClientInfo from "./client_info.js";
 import History from "./history.js";
 import MouvementLoss from './mouvement_loss.js';
@@ -13,6 +14,7 @@ import StaticOtherTests from './static_other_tests.js';
 import ProvisionalClassification from './provisional_class.js';
 import PrincipleOfManagement from './principle_of_management.js';
 import SpecificQuestions from './specific_questions.js';
+
 
 
 class App extends React.Component {
@@ -41,6 +43,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+          <SideNav />
           <ClientInfo prop="value" />
           <History />
           <SpecificQuestions/>
