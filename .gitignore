@@ -9,8 +9,8 @@ gen
 /node_modules
 
 # Public JS and CSS
-/public/css/*.css|.map
-/public/js/*.js|.map
+/public/css
+/public/js
 
 # ESLint
 .eslintrc.js
