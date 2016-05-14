@@ -23,7 +23,7 @@ class ClientInfo extends React.Component {
   render() {
     return (
     
-      <div className="clientInfo row container">
+      <div className="clientInfo row container section scrollspy" id="clientInfo">
         <div className="col s12">
           
             <div className="row">
@@ -35,58 +35,39 @@ class ClientInfo extends React.Component {
               
             <div className = "clientInfo__personalInfo row">
               <h1>Personal Information</h1>
-              <div className = "clientInfo__personalInfo__question row">
-                
-                <div className="input-field col s12 m6 l6">
-                  <input id="firstName" type="text"/>
-                  <label for="firstName">First Name</label>
-                </div>
-      
-                <div className="input-field col s12 m6 l6">
-                  <input id="lastName" type="text" />
-                  <label for="lastName">Last Name</label>
-                </div>
-                
-              </div>
+            </div>
+            
+            <div className = "clientInfo__personalInfo__question row">
+                <Input s={12} m={6} l={6} label="First Name" />
+                <Input s={12} m={6} l={6} label="Last Name" /> 
+            </div>
               
               
-              <div className = "clientInfo__personalInfo__question row">
-
+             <div className = "clientInfo__personalInfo__question row">
                 <div className="input-field col s6 m4 l4">
                   <label for="dob">Date of Birth</label>
                   <input type="date" className="datepicker"/>
                 </div>
-  
-                <div className="input-field col s6 m4 l4">
+                  <div className="input-field col s6 m4 l4">
                   <input id="age" type="number" min="0" max="105" />
                   <label for="age">Age</label>
                 </div>
-              
                 <div className="input-field col s12 m4 l4">
-                  <Input name='gender' type='radio' value='female' label='female' />
-                  <Input name='gender' type='radio' value='male' label='male' />
-                  <Input name='gender' type='radio' value='other' label='other' />
+                  <Input name="gender" type="radio" value="female" label="female" />
+                  <Input name="gender" type="radio" value="male" label="male" />
+                  <Input name="gender" type="radio" value="other" label="other" />
                 </div>
               </div>
-              
-            </div>
-            
+
             
             <div className = "clientInfo__contact row">
-
-              <div className = "clientInfo__contact__question row">
-                <div className="input-field col s12">
-                  <input id="streetAddress" type="text"/>
-                  <label for="streetAddress">Address</label>
-                </div>
-              </div>
+			  	<Input s={12} label="Address" />
+            </div>
               
-              <div className = "clientInfo__contact__question row">
+            <div className = "clientInfo__contact__question row">
                 <Input s={12} m={6} l={6} label="Telephone" validate type="tel"><Icon>phone</Icon></Input>
                 <Input s={12} m={6} l={6} label="Email" validate type="email"><Icon>email</Icon></Input>
-              </div>              
-            </div>
-
+            </div>              
 
           <div className = "clientInfo__stresses row">
             <h1>Stresses and Disabilities</h1>

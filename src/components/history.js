@@ -18,7 +18,7 @@ class History extends React.Component {
     
     render() {
         return (
-            <div className="history row container">
+            <div className="history row container section scrollspy" id="history">
                 <div className="history__firstCol col s12">
                 
                     <div className="row">
