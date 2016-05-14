@@ -36,11 +36,10 @@ class ClientInfo extends React.Component {
 
     }
 
-
     render() {
         return (
 
-            <div className="clientInfo row container">
+            <div className="clientInfo row container section scrollspy" id="clientInfo">
                 <div className="col s12">
 
                     <div className="row">

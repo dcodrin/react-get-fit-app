@@ -13,7 +13,7 @@ class Posture extends React.Component {
     render() {
         return (
             
-             <div className="posture row container">
+             <div className="posture row container section scrollspy" id="posture">
                 <div className="posture__firstCol col s12">
                     <div className="row">
                         <h1>Posture</h1>

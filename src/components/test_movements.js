@@ -63,7 +63,7 @@ class TestMovements extends React.Component {
         
         return (
             
-            <div className = "row container">
+            <div className = "row container section scrollspy" id="testMovements">
             <table className = "symptomsTable">
                 <caption><span className = "title">Test Movements</span> <span className = "subtitle">describe effect on present pain</span></caption>
                 <thead>

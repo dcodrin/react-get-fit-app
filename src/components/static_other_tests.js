@@ -15,7 +15,7 @@ class StaticOtherTests extends React.Component {
     
     return (
         
-        <div className="staticOtherTests row container">
+        <div className="staticOtherTests row container section scrollspy" id="staticTests">
 			<div className="staticOtherTests__firstCol col s12">
 			
             	<div className="row">

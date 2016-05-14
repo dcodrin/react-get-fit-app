@@ -14,7 +14,7 @@ class Neurological extends React.Component {
     
     return (
         
-		<div className="neurological row container">
+		<div className="neurological row container section scrollspy" id="neurological">
 			<div className="neurological__firstCol col s12">
 			
             	<div className="row">

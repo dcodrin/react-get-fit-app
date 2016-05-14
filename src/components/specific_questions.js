@@ -12,7 +12,7 @@ class SpecificQuestions extends React.Component {
 
     render() {
         return (
-            <div className="specificQuestions row container">
+            <div className="specificQuestions row container section scrollspy" id="specificQuestions">
                 <div className="col s12">
                     <div className="row">
                         <h1>Specific Questions</h1>

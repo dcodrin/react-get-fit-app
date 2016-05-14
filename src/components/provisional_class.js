@@ -15,7 +15,7 @@ class ProvisionalClassification extends React.Component {
     
     return (
         
-        <div className="provisionalClass row container">
+        <div className="provisionalClass row container section scrollspy" id="provisionalClass">
 			<div className="provisionalClass__firstCol col s12">
 			
             	<div className="row">

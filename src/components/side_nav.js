@@ -11,6 +11,7 @@ class SideNav extends React.Component {
         };
         this.handleClick = this.handleClick.bind(this);
         this.handleWindowClick = this.handleWindowClick.bind(this);
+        this.handleNavClick = this.handleNavClick.bind(this);
     }
     
     componentDidMount(){
@@ -38,24 +39,28 @@ class SideNav extends React.Component {
         });
         
     }
+    
+    handleNavClick(e){
+        e.stopPropagation();
+    }
 
     render(){
        
         return(
         
         
-        <div>
+        <div onClick={this.handleNavClick}>
             <ul ref='slide-out' id="slide-out" className={this.state.showSide ? 'show-side side-nav col section table-of-contents' : 'side-nav col section table-of-contents'}>
                 <li><a href="#clientInfo">Personal Information</a></li>
                 <li><a href="#history">History</a></li>
-                <li><a href="#initialization">Specific Questions</a></li>
-                <li><a href="#initialization">Posture</a></li>
-                <li><a href="#initialization">Neurological</a></li>
-                <li><a href="#initialization">Movement Loss</a></li>   
-                <li><a href="#initialization">Test Movements</a></li>
-                <li><a href="#initialization">Static Tests</a></li>
-                <li><a href="#initialization">Provisional Classification</a></li>
-                <li><a href="#initialization">Principal of Management</a></li>                             
+                <li><a href="#specificQuestions">Specific Questions</a></li>
+                <li><a href="#posture">Posture</a></li>
+                <li><a href="#neurological">Neurological</a></li>
+                <li><a href="#movementLoss">Movement Loss</a></li>   
+                <li><a href="#testMovements">Test Movements</a></li>
+                <li><a href="#staticTests">Static Tests</a></li>
+                <li><a href="#provisionalClass">Provisional Classification</a></li>
+                <li><a href="#principleManagement">Principal of Management</a></li>                             
             </ul>
             <div style={this.state.showSide ? {opacity: '0', transition: 'all 0.5s'} : {transition: 'all 0.5s'}} onClick={this.handleClick}><a href="#" data-activates="slide-out" className="button-collapse show-on-large"><i className="medium material-icons">list</i></a></div>
         </div>    

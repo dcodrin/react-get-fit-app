@@ -7,5 +7,23 @@
 }
 
 #slide-out {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(243, 58, 0, 0.8);
+}
+
+.table-of-contents a:hover {
+    color: white !important;
+}
+
+.side-nav a {
+    color: white !important;
+}
+
+.table-of-contents a.active {
+    border-left: 4px solid #fff !important;
+}
+
+a.button-collapse {
+    color: rgb(243, 58, 0);
+    position: fixed;
+    margin: 1rem;
 }

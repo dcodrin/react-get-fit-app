@@ -13,7 +13,7 @@ class PrincipleOfManagement extends React.Component {
 		
 			return (
 
-			<div className="principleManagement row container">
+			<div className="principleManagement row container section scrollspy" id="principleManagement">
 				<div className="principleManagement__firstCol col s12">
 			
             		<div className="row">
