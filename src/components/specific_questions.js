@@ -6,8 +6,11 @@ class SpecificQuestions extends React.Component {
     constructor(props) {
 
         super(props);
-
-    }
+     }     
+       
+      componentDidMount(){
+          $('select').material_select();
+      }
 
 
     render() {

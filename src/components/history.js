@@ -14,6 +14,9 @@ class History extends React.Component {
       selectMonths: true, 
       selectYears: 15 
     });
+    
+    $('select').material_select();
+
   }
     
     render() {
