@@ -49,11 +49,11 @@ class App extends React.Component {
           <SpecificQuestions/>
           <Posture/>
           <Neurological/>
+          <MouvementLoss/>
           <TestMovements />
           <StaticOtherTests />
           <ProvisionalClassification />
           <PrincipleOfManagement/>
-          <MouvementLoss/>
       </div>
     );
   }

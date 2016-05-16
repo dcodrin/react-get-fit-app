@@ -62,7 +62,7 @@ class SideNav extends React.Component {
                 <li><a href="#provisionalClass">Provisional Classification</a></li>
                 <li><a href="#principleManagement">Principal of Management</a></li>                             
             </ul>
-            <div style={this.state.showSide ? {opacity: '0', transition: 'all 0.5s'} : {transition: 'all 0.5s'}} onClick={this.handleClick}><a href="#" data-activates="slide-out" className="button-collapse show-on-large"><i className="medium material-icons">list</i></a></div>
+            <div className="spacer" style={this.state.showSide ? {opacity: '0', transition: 'all 0.5s'} : {transition: 'all 0.5s'}} onClick={this.handleClick}><a href="#" data-activates="slide-out" className="button-collapse show-on-large"><i className="medium material-icons">list</i></a></div>
         </div>    
     
             

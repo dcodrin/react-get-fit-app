@@ -11,6 +11,3 @@ gen
 # Public JS and CSS
 /public/css
 /public/js
-
-# ESLint
-.eslintrc.js

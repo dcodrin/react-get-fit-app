@@ -29,7 +29,7 @@ class ClientInfo extends React.Component {
     onSuggestChange(e) {
         this.setState({
             suggest: e.target.value
-        })
+        });
     }
 
     getAge() {
@@ -40,12 +40,12 @@ class ClientInfo extends React.Component {
         return (
 
             <div className="clientInfo row container section scrollspy" id="clientInfo">
-                <div className="col s12">
+                <div className="clientInfo__firstCol col s12">
 
                     <div className="row">
                         <div className="input-field col s6 m3 l3">
                             <label for="date">Date</label>
-                            <input type="date" className="datepicker"/>
+                            <input ref="currentDate" type="date" className="datepicker"/>
                         </div>
                         <div className="input-field col s6 m3 l3">
                             <input placeholder="File Number" type="text" id="clientInfo__fileNumber"/>

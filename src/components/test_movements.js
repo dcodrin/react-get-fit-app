@@ -71,7 +71,7 @@ class TestMovements extends React.Component {
 			</div>
             
             
-            <table className = "symptomsTable responsive-table">
+            <table className = "symptomsTable">
                 <thead>
                 <tr>
                     <th className = "symptoms"></th>
