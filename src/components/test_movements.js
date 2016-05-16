@@ -5,7 +5,7 @@ class During extends React.Component {
     render(){
         return (
                 <td>
-                    <Input type = 'select' s={12}>
+                    <Input type = "select" s={12}>
                         <option value="1">no effect</option>
                         <option value="2">produces</option>
                         <option value="3">abolishes</option>
@@ -23,7 +23,7 @@ class After extends React.Component {
     render(){
         return (
                 <td>
-                    <Input type ='select' s={12}>
+                    <Input type ="select" s={12}>
                         <option value="1">no effect</option>
                         <option value="2">better</option>
                         <option value="3">worse</option>
@@ -64,8 +64,14 @@ class TestMovements extends React.Component {
         return (
             
             <div className = "row container section scrollspy" id="testMovements">
-            <table className = "symptomsTable">
-                <caption><span className = "title">Test Movements</span> <span className = "subtitle">describe effect on present pain</span></caption>
+            <div className="col s12">
+                
+			<div className="row">
+				<span className = "title">Test Movements</span> <span className = "subtitle">describe effect on present pain</span>
+			</div>
+            
+            
+            <table className = "symptomsTable responsive-table">
                 <thead>
                 <tr>
                     <th className = "symptoms"></th>
@@ -156,6 +162,7 @@ class TestMovements extends React.Component {
                 </tbody>
                 </table>
             </div>
+			</div>
             
         );
     }
