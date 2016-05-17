@@ -10,43 +10,16 @@
     }
     
     h2 {
-        font-size: 1.8em;
-        font-weight: lighter;
-        text-align: right;
-        padding: 1.4em 1em 0 0;
+        font-size: 1.8rem;
+        font-weight: 300;
         
     }
     
     h3 {
         font-size: 1.8rem;
-        font-weight: lighter;
-        text-align: right;
-        padding-right: 1.4rem;
-        margin-top: -1.6rem;
+        font-weight: 300;
     }
     
-    .firstWord {
-        font-weight: 400;    
-    }
-    
-    &__radioRow__prevEpisodes h3 {
-        margin-top: 0.6rem;
-        margin-bottom: 1.6rem;
-    }
-    
-    &__radioRow__radioCol {
-        margin-top: 2em;
-        
-        &.noReason {
-            padding: 0;
-        }
-    
-        &__presentSince {
-            margin-top: 2em;
-            padding: 0 2em;    
-        }
-        
-    }
     
    &__or { 
         font-size: 2em;

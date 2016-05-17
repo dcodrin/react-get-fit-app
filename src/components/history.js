@@ -88,7 +88,7 @@ class History extends React.Component {
                     <div className="history__firstDivider divider"></div>
                     
                     <div className="history__betterWorse row">
-                        <div className="col s12 m3 l3"><h2><span className="firstWord">Symptoms</span><br />worse</h2></div>
+                        <div className="col s12 m3 l3"><h2>Symptoms Worse</h2></div>
                         <div className="col s12 m9 l9">
                             <div className="history__betterWorse__checkRow row">
                                 <Input name="symptomWorsePos" type="checkbox" value="bending" label="bending" />
@@ -115,7 +115,7 @@ class History extends React.Component {
                     <div className="divider"></div>
                     
                     <div className="history__betterWorse row">
-                        <div className="col s12 m3 l3"><h2><span className="firstWord">Symptoms</span><br />better</h2></div>
+                        <div className="col s12 m3 l3"><h2>Symptoms Better</h2></div>
                         <div className="col s12 m9 l9">
                             <div className="row">
                                 <Input name="symptomBetterPos" type="checkbox" value="bending" label="bending" />
@@ -142,8 +142,8 @@ class History extends React.Component {
                     
                     <div className="divider"></div>
                     
-                    <div className="history__radioRow row">
-                        <div className="history__radioRow__radioCol col s12 m3 l3"><h3><span className="firstWord">Disturbed</span><br />sleep</h3></div>
+                    <div className="history__radioRow row valign-wrapper">
+                        <div className="history__radioRow__radioCol col s12 m3 l3"><h3>Disturbed Sleep</h3></div>
                         <div className="history__radioRow__radioCol col s12 m3 l3">
                         <Input name="disturbedSleep" type="radio" value="yes" label="yes" />
                         <Input name="disturbedSleep" type="radio" value="no" label="no" />
@@ -169,15 +169,15 @@ class History extends React.Component {
                     
                     <div className="divider"></div>
                     
-                    <div className="history__radioRow row">
-                        <div className="history__radioRow__prevEpisodes col s12 m3 l3"><h3><span className="firstWord">Previous</span><br />episodes</h3></div>
+                    <div className="history__radioRow row valign-wrapper">
+                        <div className="history__radioRow__prevEpisodes col s12 m3 l3"><h3>Previous Episodes</h3></div>
                         <div className="history__radioRow__radioCol col s12 m5 l5">
                             <Input name="amoutEpisodes" type="radio" value="0" label="0" />
                             <Input name="amoutEpisodes" type="radio" value="1_5" label="1 to 5" />
                             <Input name="amoutEpisodes" type="radio" value="6_10" label="6 to 10" />
                             <Input name="amoutEpisodes" type="radio" value="11plus" label="11 +" />
                         </div>
-                        <Input s={12} m={3} l={3} name="yearFirstEpisode" label="Year of First Episode" />
+                        <Input s={12} m={4} l={4} name="yearFirstEpisode" label="Year of First Episode" />
                     </div>
 
                     <div className="history__lastDivider divider"></div>
