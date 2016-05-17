@@ -42,7 +42,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <form>
           <SideNav />
           <ClientInfo prop="value" />
           <History />
@@ -54,7 +54,8 @@ class App extends React.Component {
           <StaticOtherTests />
           <ProvisionalClassification />
           <PrincipleOfManagement/>
-      </div>
+              <button>CLICK LE ME</button>
+      </form>
     );
   }
 }

@@ -7,18 +7,48 @@ class ClientInfo extends React.Component {
     constructor(props) {
         //We access functions/methods on the object's parent using the super;
         super(props);
-        this.state = {suggest: ''};
+        this.state = {suggest: '', currentDate: '', age: ''};
 
         this.onSuggestSelect = this.onSuggestSelect.bind(this);
-        this.getAge = this.getAge.bind(this);
         this.onSuggestChange = this.onSuggestChange.bind(this);
+        this.setupDatepicker = this.setupDatepicker.bind(this);
     }
 
-    // runs JS once my component has mounted
     componentDidMount() {
-        $('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15 // Creates a dropdown of 15 years to control year
+        this.setupDatepicker('agepicker');
+        this.setupDatepicker('datepicker');
+    }
+
+    setupDatepicker(source) {
+        const that = this;
+        const dateInput = source ? this.refs[source] : null;
+
+        //Set the maximum year to two years from current year
+        let date = new Date();
+        date.setFullYear(date.getFullYear() + 2);
+
+        function calculateAge(birthday){
+            const ageDiff = Date.now() - birthday.getTime();
+            const ageDate = new Date(ageDiff);
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
+
+        let map = {
+            agepicker: 'age',
+            datepicker: 'currentDate'
+        };
+
+        $(dateInput).pickadate({
+            max: date,
+            selectYears: 100,
+            selectMonths: true,
+            closeOnSelect: true,
+            onClose: function(){
+            that.setState({
+                [map[source]]: source === 'agepicker' ? calculateAge(new Date(dateInput.value)) : dateInput.value
+            });
+
+            }
         });
     }
 
@@ -32,10 +62,6 @@ class ClientInfo extends React.Component {
         });
     }
 
-    getAge() {
-
-    }
-
     render() {
         return (
 
@@ -45,7 +71,7 @@ class ClientInfo extends React.Component {
                     <div className="row">
                         <div className="input-field col s6 m3 l3">
                             <label for="date">Date</label>
-                            <input ref="currentDate" type="date" className="datepicker"/>
+                            <input ref="datepicker" type="date" className="datepicker"/>
                         </div>
                         <div className="input-field col s6 m3 l3">
                             <input placeholder="File Number" type="text" id="clientInfo__fileNumber"/>
@@ -57,8 +83,7 @@ class ClientInfo extends React.Component {
                         <div className="clientInfo__personalInfo__question row">
 
                             <div className="input-field col s12 m6 l6">
-                                <input id="firstName" type="text"/>
-                                <label for="firstName">First Name</label>
+                                <Input id="firstName" type="text" label="First Name"/>
                             </div>
 
                             <div className="input-field col s12 m6 l6">
@@ -73,12 +98,12 @@ class ClientInfo extends React.Component {
 
                             <div className="input-field col s6 m4 l4">
                                 <label for="dob">Date of Birth</label>
-                                <input type="date" className="datepicker"/>
+                                <input ref="agepicker" type="date" className="datepicker"/>
                             </div>
 
                             <div className="input-field col s6 m4 l4">
-                                <input id="age" type="number" min="0" max="105"/>
-                                <label for="age">Age</label>
+                                <input value={this.state.age} id="age" />
+                                <label className="active" for="age">Age</label>
                             </div>
 
                             <div className="input-field col s12 m4 l4">
@@ -95,7 +120,8 @@ class ClientInfo extends React.Component {
 
                         <div className="clientInfo__contact__question row">
                             <div className="col s12">
-                                <Geosuggest className="col s12" update={this.state.suggest} onSuggestSelect={this.onSuggestSelect} country="ca"
+                                <Geosuggest className="col s12" update={this.state.suggest}
+                                            onSuggestSelect={this.onSuggestSelect} country="ca"
                                             placeholder='Address'/>
                             </div>
                         </div>
@@ -122,12 +148,12 @@ class ClientInfo extends React.Component {
 
                         <div className="clientInfo__stresses__question row">
                             <div className="input-field col s6">
-                                <textarea id="workStresses" className="materialize-textarea"></textarea>
+                                <textarea id="workStresses" className="materialize-textarea"/>
                                 <label for="workStresses">Work - Mechanical Stresses</label>
                             </div>
 
                             <div className="input-field col s6">
-                                <textarea id="leisureStresses" className="materialize-textarea"></textarea>
+                                <textarea id="leisureStresses" className="materialize-textarea"/>
                                 <label for="leisureStresses">Leisure - Mechanical Stresses</label>
                             </div>
                         </div>
@@ -135,7 +161,7 @@ class ClientInfo extends React.Component {
                         <div className="clientInfo__stresses__question row">
                             <div className="input-field col s6">
                                 <label for="disabilityPresent">Functional Disability from present episode</label>
-                                <textarea id="disabilityPresent" className="materialize-textarea"></textarea>
+                                <textarea id="disabilityPresent" className="materialize-textarea"/>
                             </div>
 
                             <div className="input-field clientInfo__stresses__question__fds col s3">
