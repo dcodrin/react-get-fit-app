@@ -4,14 +4,14 @@
     The purpose of this project is to have our students practice their  
     coding skills in a production environment for a live medical app.
 
-###Project is currently in alpha stage. 
+####Project is currently in alpha stage. 
 Tools used for this project include:
-*React.js
-*Redux and Redux-Form
-*Sass
-*MaterializeCSS
-*Webpack
-*Firebase
+* React.js
+* Redux and Redux-Form
+* Sass
+* MaterializeCSS
+* Webpack
+* Firebase
 
 #### Created by Marie Godon
 #### Special thanks to
