@@ -6,6 +6,7 @@
 
 ####Project is currently in alpha stage. 
 Tools used for this project include:
+>
 * React.js
 * Redux and Redux-Form
 * Sass
