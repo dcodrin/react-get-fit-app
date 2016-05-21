@@ -17,9 +17,21 @@
   border-left: 4px solid #fff !important; }
 
 a.button-collapse {
-  color: #f33a00;
+  position: fixed; }
+  a.button-collapse i {
+    color: #f33a00;
+    border: 1px solid #f33a00;
+    border-radius: 50%;
+    padding: 0.4rem;
+    background-color: #fff; }
+
+.spacer {
   position: fixed;
-  margin: 1rem; }
+  right: 0;
+  height: 6rem;
+  width: 100px;
+  z-index: 99999;
+  padding: 1rem; }
 
 .materialize-red {
   background-color: #e51c23 !important; }
@@ -6170,67 +6182,30 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
-.clientInfo h1 {
-  font-size: 2em; }
+.clientInfo__firstCol {
+  margin-top: 5rem; }
 .clientInfo [type="radio"]:not(:checked) + label, .clientInfo [type="radio"]:checked + label {
   display: inline; }
-.clientInfo #disabilityScore {
-  margin-top: 3.2em; }
-.clientInfo #vas {
-  margin-top: 3.2em; }
-.clientInfo__stresses__question__vas label, .clientInfo__stresses__question__fds label {
-  margin-top: 2em; }
 
 .history__firstCol.col {
   padding: 0; }
-.history h1 {
-  font-size: 2rem;
-  padding-left: 0.75rem; }
-.history h2 {
-  font-size: 1.8em;
-  font-weight: lighter;
-  text-align: right;
-  padding: 1.4em 1em 0 0; }
-.history h3 {
-  font-size: 1.8rem;
-  font-weight: lighter;
-  text-align: right;
-  padding-right: 1.4rem;
-  margin-top: -1.6rem; }
-.history .firstWord {
-  font-weight: 400; }
-.history__radioRow__prevEpisodes h3 {
-  margin-top: 0.6rem;
-  margin-bottom: 1.6rem; }
-.history__radioRow__radioCol {
-  margin-top: 2em; }
-  .history__radioRow__radioCol.noReason {
-    padding: 0; }
-  .history__radioRow__radioCol__presentSince {
-    margin-top: 2em;
-    padding: 0 2em; }
 .history__or {
   font-size: 2em;
   font-weight: 200;
   text-align: center;
   margin-top: 0.6em; }
-.history .divider {
-  margin-bottom: 3.4rem; }
-.history__firstDivider.divider {
-  margin-top: 2.4rem; }
-.history__lastDivider.divider {
-  margin-bottom: 2.4rem; }
+.history__betterWorse__radioRow {
+  border-top: 1px solid rgba(243, 58, 0, 0.2);
+  border-bottom: 1px solid rgba(243, 58, 0, 0.2);
+  padding: 10px 0; }
 
-.specificQuestions h1 {
-  font-size: 2em; }
-.specificQuestions h2 {
-  font-size: 1.6em;
-  font-weight: 300; }
 .specificQuestions__checkRow {
   display: flex;
   flex-wrap: wrap; }
 .specificQuestions__bladderGait h2 {
   margin-right: 1em; }
+.specificQuestions .valign-wrapper {
+  flex-wrap: wrap; }
 
 .posture__firstCol.col {
   padding: 0; }
@@ -6268,9 +6243,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .symptomsTable .mech {
   width: 25%; }
-
-caption {
-  padding: 3em; }
 
 .title {
   font-size: 2em; }
@@ -6317,14 +6289,28 @@ caption {
 
 .movementLoss__firstCol.col {
   padding: 0; }
-.movementLoss h1 {
-  font-size: 2em;
-  margin-left: 0.75rem; }
-.movementLoss h2 {
-  font-size: 1.6em;
-  font-weight: 300;
+.movementLoss h3 {
   text-align: right; }
+.movementLoss td {
+  padding: 0px; }
 
+@media only screen and (max-width: 992px) {
+  .movementLoss h3 {
+    text-align: center;
+    font-size: 1.4rem; }
+  .movementLoss table.responsive-table tbody {
+    white-space: normal; }
+  .movementLoss table.responsive-table td, .movementLoss table.responsive-table th {
+    min-height: 2.25em;
+    padding: 0px; }
+  .movementLoss table.responsive-table td {
+    text-align: center; }
+  .movementLoss table.responsive-table th {
+    text-align: left; }
+  .movementLoss table.responsive-table tr {
+    width: 20%; }
+  .movementLoss table.responsive-table [type="radio"] + label:before, .movementLoss table.responsive-table [type="radio"] + label:after {
+    left: initial; } }
 .geosuggest {
   font-size: 18px;
   font-size: 1em;
@@ -6378,5 +6364,50 @@ caption {
     color: #333; }
     .geosuggest--active:hover, .geosuggest--active:focus {
       background: #ff7043; }
+
+/* Global ------------------------------------------------------------------ */
+.valign-wrapper {
+  flex-wrap: wrap; }
+
+.vbalign {
+  align-items: flex-start; }
+
+h1 {
+  color: #f33a00;
+  text-align: center;
+  font-size: 2em; }
+
+h2 {
+  margin: 1rem 0 2rem 0; }
+
+h2, h3 {
+  font-size: 1.6rem;
+  font-weight: 300; }
+
+.rmLP {
+  padding-left: 0px !important; }
+
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.87); }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.87); }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.87); }
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.87); }
+
+.section {
+  padding: 0; }
+
+.row {
+  margin-bottom: 10px; }
+
+textarea.materialize-textarea, input[type="number"] {
+  padding: 1.6rem 0 0; }
 
 /*# sourceMappingURL=main.css.map */
