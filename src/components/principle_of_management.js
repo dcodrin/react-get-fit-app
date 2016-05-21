@@ -17,7 +17,7 @@ class PrincipleOfManagement extends React.Component {
   }
 		
 		render() {
-			conset {fields: {pomEdu, pomEquip, pomMechTher, pomMechTherComment,pomExt, pomLat, pomFlex, pomOther, pomGoals}, handleSubmit} = this.props;
+			const {fields: {pomEdu, pomEquip, pomMechTher, pomMechTherComment,pomExt, pomLat, pomFlex, pomOther, pomGoals}, handleSubmit} = this.props;
 			return (
 			<form onSubmit={handleSubmit}>
 			<div className="principleManagement row container section scrollspy" id="principleManagement">
