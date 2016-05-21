@@ -3,26 +3,9 @@
     &__firstCol {
         margin-top: 5rem;
     }
-    h1 {
-        font-size: 2em;
-    }
     
     [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
         display: inline;
     }
-    
-    #disabilityScore {
-        margin-top: 3.2em;
-    }
-    
-    #vas {
-        margin-top: 3.2em;
-    }
-    
-    &__stresses__question__vas, &__stresses__question__fds {
-        label {
-            margin-top: 2em;
-        }
-    }
-        
+           
 }
