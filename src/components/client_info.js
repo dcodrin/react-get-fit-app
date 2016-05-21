@@ -68,9 +68,9 @@ class ClientInfo extends React.Component {
             <div className="clientInfo row container section scrollspy" id="clientInfo">
                 <div className="clientInfo__firstCol col s12">
 
-                    <div className="row">
-                        <div className="input-field col s6 m3 l3">
-                            <label for="date">Date</label>
+                    <div className="clientInfo row">
+                        <div className="input-field col s6 m3 l3 rmLP ">
+                            <label className="rmLP" for="date">Date</label>
                             <input ref="datepicker" type="date" className="datepicker"/>
                         </div>
                         <div className="input-field col s6 m3 l3">
@@ -78,49 +78,35 @@ class ClientInfo extends React.Component {
                         </div>
                     </div>
 
+
                     <div className="clientInfo__personalInfo row">
                         <h1>Personal Information</h1>
                         <div className="clientInfo__personalInfo__question row">
-
-                            <div className="input-field col s12 m6 l6">
-                                <Input id="firstName" type="text" label="First Name"/>
-                            </div>
-
-                            <div className="input-field col s12 m6 l6">
-                                <input id="lastName" type="text"/>
-                                <label for="lastName">Last Name</label>
-                            </div>
-
+                            <Input id="firstName" type="text" s={12} m={6} l={6} label="First Name"/>
+                            <Input id="lastName" type="text" s={12} m={6} l={6}  label="Last Name"/>
                         </div>
 
-
                         <div className="clientInfo__personalInfo__question row">
-
-                            <div className="input-field col s6 m4 l4">
-                                <label for="dob">Date of Birth</label>
+                            <div className="input-field col s6 m3 l3">
                                 <input ref="agepicker" type="date" className="datepicker"/>
+                                <label className="active" for="dob">Date of Birth</label>
                             </div>
 
-                            <div className="input-field col s6 m4 l4">
+                            <div className="input-field col s6 m3 l3">
                                 <input value={this.state.age} id="age" />
                                 <label className="active" for="age">Age</label>
                             </div>
 
-                            <div className="input-field col s12 m4 l4">
+                            <div className="input-field col s12 m6 l6">
                                 <Input name='gender' type='radio' value='female' label='female'/>
                                 <Input name='gender' type='radio' value='male' label='male'/>
                                 <Input name='gender' type='radio' value='other' label='other'/>
                             </div>
                         </div>
 
-                    </div>
-
-
-                    <div className="clientInfo__contact row">
-
                         <div className="clientInfo__contact__question row">
                             <div className="col s12">
-                                <Geosuggest className="col s12" update={this.state.suggest}
+                                <Geosuggest className="col s12 rmLP" update={this.state.suggest}
                                             onSuggestSelect={this.onSuggestSelect} country="ca"
                                             placeholder='Address'/>
                             </div>
@@ -136,8 +122,8 @@ class ClientInfo extends React.Component {
                     <div className="clientInfo__stresses row">
                         <h1>Stresses and Disabilities</h1>
                         <div className="clientInfo__stresses__question row">
-                            <div className="input-field col s12">
-                                <Input type='select' label="Referral">
+                            <div className="input-field col rmLP">
+                                <Input s={12} type='select' label="Referral">
                                     <option value="gp">GP</option>
                                     <option value="orth">Orth</option>
                                     <option value="self">Self</option>
@@ -147,29 +133,29 @@ class ClientInfo extends React.Component {
                         </div>
 
                         <div className="clientInfo__stresses__question row">
-                            <div className="input-field col s6">
+                            <div className="input-field col s12 m6">
                                 <textarea id="workStresses" className="materialize-textarea"/>
                                 <label for="workStresses">Work - Mechanical Stresses</label>
                             </div>
 
-                            <div className="input-field col s6">
+                            <div className="input-field col s12 m6">
                                 <textarea id="leisureStresses" className="materialize-textarea"/>
                                 <label for="leisureStresses">Leisure - Mechanical Stresses</label>
                             </div>
                         </div>
 
-                        <div className="clientInfo__stresses__question row">
-                            <div className="input-field col s6">
+                        <div className="clientInfo__stresses__question valign-wrapper vbalign row">
+                            <div className="input-field col s12 m6">
                                 <label for="disabilityPresent">Functional Disability from present episode</label>
                                 <textarea id="disabilityPresent" className="materialize-textarea"/>
                             </div>
 
-                            <div className="input-field clientInfo__stresses__question__fds col s3">
+                            <div className="input-field clientInfo__stresses__question__fds col s6 m3">
                                 <label for="disabilityScore">Functional Disability Score</label>
-                                <input id="disabilityScore" type="number" min="0" max="10"/>
+                                <input id="disabilityScore" type="number"/>
                             </div>
 
-                            <div className="input-field clientInfo__stresses__question__vas col s3">
+                            <div className="input-field clientInfo__stresses__question__vas col s6 m3">
                                 <label for="vas">VAS Score (0-10)</label>
                                 <input id="vas" type="number" min="0" max="10"/>
                             </div>

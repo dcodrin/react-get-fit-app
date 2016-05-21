@@ -3,40 +3,17 @@
     &__firstCol.col {
         padding: 0;
     }
-    
-    h1{
-        font-size: 2rem;
-        padding-left: 0.75rem;
-    }
-    
-    h2 {
-        font-size: 1.8rem;
-        font-weight: 300;
-        
-    }
-    
-    h3 {
-        font-size: 1.8rem;
-        font-weight: 300;
-    }
-    
-    
+
    &__or { 
         font-size: 2em;
         font-weight: 200;
         text-align: center;
         margin-top: 0.6em;
    }
-
-    .divider {
-        margin-bottom: 3.4rem;    
-    }
     
-    &__firstDivider.divider {
-        margin-top: 2.4rem;
+    &__betterWorse__radioRow {
+        border-top: 1px solid rgba(243, 58, 0, 0.2);
+        border-bottom: 1px solid rgba(243, 58, 0, 0.2);
+        padding: 10px 0;
     }
-    
-    &__lastDivider.divider{
-        margin-bottom: 2.4rem;
-    }
-}    
+}

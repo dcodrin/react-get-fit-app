@@ -29,6 +29,53 @@
 //   color: $primary-font-color;
 // }
 
+/* Global ------------------------------------------------------------------ */
 .valign-wrapper {
     flex-wrap: wrap;
+}
+.vbalign {
+    align-items:flex-start;
+}
+
+h1 {
+    color: rgb(243, 58, 0);
+    text-align:center;
+    font-size: 2em;
+}
+h2 {
+    margin: 1rem 0 2rem 0;
+}
+    
+h2, h3 {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.rmLP {
+    padding-left: 0px !important;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(0, 0, 0, 0.87);
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(0, 0, 0, 0.87);
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(0, 0, 0, 0.87);
+}
+:-ms-input-placeholder {  
+   color: rgba(0, 0, 0, 0.87);
+}
+
+.section {
+    padding:0;
+}
+
+.row {
+   margin-bottom: 10px; 
+}
+
+textarea.materialize-textarea, input[type="number"] {
+    padding: 1.6rem 0 0;
 }
