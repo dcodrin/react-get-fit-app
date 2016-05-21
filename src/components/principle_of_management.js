@@ -1,12 +1,8 @@
 import React from "react";  
 import {Input} from "react-materialize";
-import {createStore, combineReducers} from "redux";
-import {reducer as formReducer} from "redux-form";
-const reducers ={
-	form: formReducer
-}
-const reducer = combineReducers(reducers);
-const store = createStore(reducer);
+import {bindActionCreators} from "redux";
+import {reduxForm} from "redux-form";
+
 
 class PrincipleOfManagement extends React.Component {
 
@@ -17,7 +13,7 @@ class PrincipleOfManagement extends React.Component {
   }
 		
 		render() {
-			conset {fields: {pomEdu, pomEquip, pomMechTher, pomMechTherComment,pomExt, pomLat, pomFlex, pomOther, pomGoals}, handleSubmit} = this.props;
+			const {fields: {pomEdu, pomEquip, pomMechTher, pomMechTherComment,pomExt, pomLat, pomFlex, pomOther, pomGoals}, handleSubmit} = this.props;
 			return (
 			<form onSubmit={handleSubmit}>
 			<div className="principleManagement row container section scrollspy" id="principleManagement">
@@ -42,7 +38,7 @@ class PrincipleOfManagement extends React.Component {
 						</div>
 							<Input s={12} m={6} l={6} {...pomMechTherComment}/>
 					</div>
-
+					
 					<div className="row">
 						<Input s={12} m={6} l={6} label="Extension Principle" {...pomExt}/>
 						<Input s={12} m={6} l={6} label="Lateral Principle" {...pomLat} />
@@ -66,9 +62,14 @@ class PrincipleOfManagement extends React.Component {
     }
 }
 
-PrincipleOfManagement = reduxForm({
-	form: "principleOfManagement",
-	fields: ["pomEdu", "pomEquip", "pomMechTher", "pomMechTherComment", "pomExt", "pomLat", "pomFlex", "pomOther", "pomGoals"]
-})(PrincipleOfManagement);
+function validate(values){
+	const errors = {};
+    !values.pomMechTher ? errors.pomMechTher = "Select yes or no" : null;
+    return errors;
+}
 
-export default PrincipleOfManagement;
+export default reduxForm({
+	form: "PrincipleOfManagement",
+	fields: ["pomEdu", "pomEquip", "pomMechTher", "pomMechTherComment", "pomExt", "pomLat", "pomFlex", "pomOther", "pomGoals"],
+	validate
+})(PrincipleOfManagement);
