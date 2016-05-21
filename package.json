@@ -34,6 +34,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "axios": "^0.11.1",
     "react-geosuggest": "^1.22.0",
     "react-materialize": "^0.14.3"
   }

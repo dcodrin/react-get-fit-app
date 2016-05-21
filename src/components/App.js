@@ -16,54 +16,50 @@ import PrincipleOfManagement from './principle_of_management.js';
 import SpecificQuestions from './specific_questions.js';
 
 
-
 class App extends React.Component {
 
 
-  constructor(props){
-    super(props);
+    constructor(props) {
+        super(props);
 
-  }
+    }
 
-  // onButtonClick(){
-  //   this.props.updateCount();
-  // }
+    // onButtonClick(){
+    //   this.props.updateCount();
+    // }
 
 
-
-  render() {
-    return (
-      <form>
-          <SideNav />
-          <ClientInfo prop="value" />
-          <History />
-          <SpecificQuestions/>
-          <Posture/>
-          <Neurological/>
-          <MouvementLoss/>
-          <TestMovements />
-          <StaticOtherTests />
-          <ProvisionalClassification />
-          <PrincipleOfManagement/>
-          <button>CLICK LE ME</button>
-      </form>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <SideNav />
+                <ClientInfo prop="value"/>
+                <History />
+                <SpecificQuestions/>
+                <Posture/>
+                <Neurological/>
+                <MouvementLoss/>
+                <TestMovements />
+                <StaticOtherTests />
+                <ProvisionalClassification />
+                <PrincipleOfManagement/>
+                <button>CLICK LE ME</button>
+            </div>
+        );
+    }
 }
-          
-
 
 
 //React components have to have a render method, and it has to return HTML.
 //This is actually .JSX, Facebook's proprietary HTML copy.
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({updateCount}, dispatch);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({updateCount}, dispatch);
 }
 
 //The current instance of App will have as one of it's props 'count'
-function mapStateToProps(state){
-  return {count: state.count};
+function mapStateToProps(state) {
+    return {count: state.count};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
