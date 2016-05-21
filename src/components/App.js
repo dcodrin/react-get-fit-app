@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {updateCount} from '../actions/index';
 import {bindActionCreators} from 'redux';  // object
 
-import SideNav from "./side_nav.js"
+import SideNav from "./side_nav.js";
 import ClientInfo from "./client_info.js";
 import History from "./history.js";
 import MouvementLoss from './mouvement_loss.js';
@@ -21,14 +21,7 @@ class App extends React.Component {
 
 
   constructor(props){
-
-
     super(props);
-    //We access function on the object's parent using the super;
-
-
-    // bind 'this' to my App
-    //this.onButtonClick = this.onButtonClick.bind(this);
 
   }
 
@@ -37,8 +30,6 @@ class App extends React.Component {
   // }
 
 
-
-  // React components MUST have a render methods and this MUST always return HTML. The 'html' below is actually jsx
 
   render() {
     return (
@@ -54,7 +45,7 @@ class App extends React.Component {
           <StaticOtherTests />
           <ProvisionalClassification />
           <PrincipleOfManagement/>
-              <button>CLICK LE ME</button>
+          <button>CLICK LE ME</button>
       </form>
     );
   }

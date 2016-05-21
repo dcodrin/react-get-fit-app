@@ -30,7 +30,7 @@ class History extends React.Component {
                     
                     <div className="row">
                         <div className="input-field col s12">
-                            <textarea id="presentSymptoms" className="materialize-textarea"></textarea>
+                            <textarea id="presentSymptoms" className="materialize-textarea" />
                             <label for="presentSymptoms">Present Symptoms</label>
                         </div>
                     </div>
@@ -184,11 +184,11 @@ class History extends React.Component {
 
                     <div className="row">
                         <div className="input-field col s12 m6 l6">
-                            <textarea id="previousHistory" className="materialize-textarea"></textarea>
+                            <textarea id="previousHistory" className="materialize-textarea" />
                             <label for="previousHistory">Previous History</label>
                         </div>
                         <div className="input-field col s12 m6 l6">
-                            <textarea id="previousTreatments" className="materialize-textarea"></textarea>
+                            <textarea id="previousTreatments" className="materialize-textarea" />
                             <label for="previousTreatments">Previous Treatments</label>
                         </div>
                     </div>
@@ -197,7 +197,7 @@ class History extends React.Component {
             </div>
             
             
-            )
+            );
     }
         
 }
