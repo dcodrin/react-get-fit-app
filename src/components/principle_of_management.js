@@ -1,5 +1,8 @@
 import React from "react";  
 import {Input} from "react-materialize";
+import {bindActionCreators} from "redux";
+import {reduxForm} from "redux-form";
+
 
 class PrincipleOfManagement extends React.Component {
 
@@ -10,9 +13,9 @@ class PrincipleOfManagement extends React.Component {
   }
 		
 		render() {
-		
+			const {fields: {pomEdu, pomEquip, pomMechTher, pomMechTherComment,pomExt, pomLat, pomFlex, pomOther, pomGoals}, handleSubmit} = this.props;
 			return (
-
+			<form onSubmit={handleSubmit}>
 			<div className="principleManagement row container section scrollspy" id="principleManagement">
 				<div className="principleManagement__firstCol col s12">
 			
@@ -21,8 +24,8 @@ class PrincipleOfManagement extends React.Component {
                 	</div>
 					
 					<div className="row">
-						<Input s={12} m={6} l={6} label="Education" />
-						<Input s={12} m={6} l={6} label="Equipment Provided" />
+						<Input s={12} m={6} l={6} label="Education" {...pomEdu}/>
+						<Input s={12} m={6} l={6} label="Equipment Provided" {...pomEquip}/>
 					</div>
 					
 					<div className="row valign-wrapper">
@@ -30,31 +33,43 @@ class PrincipleOfManagement extends React.Component {
 							<h2>Mechanical Therapy</h2>
 						</div>
 						<div className="col s6 m3 l3">
-                            <Input name="mechanicalTherapy" type="radio" value="yes" label="yes" />
-                            <Input name="mechanicalTherapy" type="radio" value="no" label="no" />
+                            <Input name="mechanicalTherapy" type="radio" value="yes" label="yes" {...pomMechTher}/>
+                            <Input name="mechanicalTherapy" type="radio" value="no" label="no" {...pomMechTher}/>
 						</div>
-							<Input s={12} m={6} l={6} />
+							<Input s={12} m={6} l={6} {...pomMechTherComment}/>
+					</div>
+					
+					<div className="row">
+						<Input s={12} m={6} l={6} label="Extension Principle" {...pomExt}/>
+						<Input s={12} m={6} l={6} label="Lateral Principle" {...pomLat} />
 					</div>
 
 					<div className="row">
-						<Input s={12} m={6} l={6} label="Extension Principle" />
-						<Input s={12} m={6} l={6} label="Lateral Principle" />
+						<Input s={12} m={6} l={6} label="Flexion Principle" {...pomFlex}/>
+						<Input s={12} m={6} l={6} label="Other" {...pomOther}/>
 					</div>
 
 					<div className="row">
-						<Input s={12} m={6} l={6} label="Flexion Principle" />
-						<Input s={12} m={6} l={6} label="Other" />
-					</div>
-
-					<div className="row">
-						<Input s={12} label="Treatment Goals" />
+						<Input s={12} label="Treatment Goals" {...pomGoals}/>
 					</div>
 										
 				</div>
-			</div> 
+			</div>
+			<button type="submit">Submit</button> 
+			</form>
 		  
 	  );
     }
 }
 
-export default PrincipleOfManagement;
+function validate(values){
+	const errors = {};
+    !values.pomMechTher ? errors.pomMechTher = "Select yes or no" : null;
+    return errors;
+}
+
+export default reduxForm({
+	form: "PrincipleOfManagement",
+	fields: ["pomEdu", "pomEquip", "pomMechTher", "pomMechTherComment", "pomExt", "pomLat", "pomFlex", "pomOther", "pomGoals"],
+	validate
+})(PrincipleOfManagement);
