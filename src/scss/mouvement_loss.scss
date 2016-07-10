@@ -12,6 +12,9 @@
       padding: 0px
     }
 
+    label {
+      margin-top: 15px;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -19,13 +22,14 @@
     h3 {
       text-align: center;
       font-size: 1.4rem;
+      margin: 0;
     }
     table.responsive-table {
       tbody {
         white-space: normal;
       }
       td, th {
-        min-height: 2.25em;
+        height: 42px;
         padding: 0px;
       }
       td {
@@ -40,6 +44,21 @@
       [type="radio"] + label:before, [type="radio"] + label:after {
         left: initial;
       }
+      label {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .movementLoss {
+
+    label {
+      margin-top: 2px;
+      margin-bottom: 4px;
     }
   }
 }

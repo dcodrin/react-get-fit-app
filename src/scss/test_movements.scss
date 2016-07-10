@@ -1,53 +1,63 @@
+.symptomsTable {
+  margin-bottom: 50px;
 
-.symptomsTable .symptoms {
-  
-  width: 25%;
+  .symptoms {
+     width: 13%;
+   }
 
+   .during {
+     width: 26%;
+   }
+
+  .mech {
+      width: 36%;
+  }
+
+  [type="radio"]:not(:checked) + label {
+    padding-left: 25px;
+  }
+
+  [type="radio"]:checked + label {
+    padding-left: 25px;
+  }
+
+  .col {
+    padding: 0 10px;
+  }
 }
 
-.upArrow{
+.upArrow, .downArrow {
     font-size: 1.8em;
     font-weight: 600;
     padding-right: 1px;
     vertical-align: middle;
 }
 
-.downArrow{
-    font-size: 1.8em;
-    font-weight: bold;
-    padding-right: 1px;
-    vertical-align: middle;
-}
-
-.symptomsTable .mech {
-  
-  width: 25%;
-
-}
-
 .title {
   font-size: 2em;
 }
 
-.subtitle {
-  font-weight:lighter;
-  font-size: 2em;
-  padding-left: 0.2em;
+#testMovements {
+  h1 {
+    margin-bottom: 0;
+  }
+
+  h3.subtitle {
+    font-weight:lighter;
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 0;
+  }
 }
 
-.sectionTitle, th {
+th {
   font-weight: 500;
   font-size: 1.2em;
-}
-
-.sectionTitle {
-  text-align: right;
-  padding-right: 5em;
+  text-align: center;
 }
 
 .symptom {
-  font-size: 1.2em;
-  font-weight: lighter;
+  font-size: 1em;
   text-align: right;
-  padding-right: 5em;
+  padding-right: 1em;
 }

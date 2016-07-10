@@ -59,18 +59,16 @@ class TestMovements extends React.Component {
     }
     
     render() {
-
-        
         return (
-            
             <div className = "row container section scrollspy" id="testMovements">
             <div className="col s12">
                 
 			<div className="row">
-				<span className = "title">Test Movements</span> <span className = "subtitle">describe effect on present pain</span>
+				<h1>Test Movements</h1>
+                <h3 className = "subtitle">Describe effect on present pain</h3>
 			</div>
-            
-            
+          
+            <h3>Pretest Symptoms Standing</h3>            
             <table className = "symptomsTable">
                 <thead>
                 <tr>
@@ -82,9 +80,7 @@ class TestMovements extends React.Component {
                 </thead>
                 <tbody>
                 <tr>
-                <td className = "sectionTitle">Pretest Symptoms Standing</td></tr>
-                <tr>
-                    <td className = "symptom">FIS</td>
+                    <td width="100px" className = "symptom">FIS</td>
                     <During />
                     <After />
                     <MechanicalRes row={1}/> 
@@ -107,8 +103,20 @@ class TestMovements extends React.Component {
                     <After />
                     <MechanicalRes row={4}/> 
                 </tr>
+                </tbody>
+            </table>
+
+            <h3>Pretest Symptoms Lying</h3>            
+            <table className = "symptomsTable">
+                <thead>
                 <tr>
-                <td className = "sectionTitle">Pretest Symptoms Lying</td></tr>
+                    <th className = "symptoms"></th>
+                    <th className = "during">Symptoms During Testing</th>
+                    <th className = "after">Symptoms After Testing</th>
+                    <th className = "mech">Mechanical Response</th>
+                </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td className = "symptom">FIL</td>
                     <During />
@@ -133,8 +141,20 @@ class TestMovements extends React.Component {
                     <After />
                     <MechanicalRes row={8}/> 
                 </tr>
+                </tbody>
+            </table>
+
+            <h3>Pretest Symptoms (if required)</h3>            
+            <table className = "symptomsTable">
+                <thead>
                 <tr>
-                <td className = "sectionTitle">Pretest Symptoms (if required)</td></tr>
+                    <th className = "symptoms"></th>
+                    <th className = "during">Symptoms During Testing</th>
+                    <th className = "after">Symptoms After Testing</th>
+                    <th className = "mech">Mechanical Response</th>
+                </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td className = "symptom">SGIS - R</td>
                     <During />
@@ -160,7 +180,7 @@ class TestMovements extends React.Component {
                     <MechanicalRes row={12}/> 
                 </tr>
                 </tbody>
-                </table>
+            </table>
             </div>
 			</div>
             
